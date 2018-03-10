@@ -1,6 +1,6 @@
 # SURTO
 
-(Link para jogar)[https://chrisdbhr.wordpress.com/2016/04/17/surto/]
+[Link para jogar](https://chrisdbhr.wordpress.com/2016/04/17/surto/)
 
 O jogo conta com várias features e sistemas interessantes para quem esta começando a usar o Construct 2. É claramente baseado no tutorial de TopDownShooter oficial da Scirra, só que com **muito** mais conteúdo.
 
