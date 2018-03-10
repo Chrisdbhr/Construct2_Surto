@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Script Loading</name>
+    <events>
+        <variable constant="0" name="loadOk" sid="6478705600402051" static="0" type="number">0</variable>
+        <event-block sid="5220113041394633">
+            <conditions>
+                <condition id="6" name="On update ready" sid="8559026010557213" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="9" name="Reload" sid="3533270008740707" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="5979176305527882">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="5201300834765885" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3441846976316219" type="System">
+                    <param id="0" name="Variable">loadOk</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1120735089022268" type="loadingCircle">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2514414765858421" type="loadText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1436028001082065">
+            <conditions>
+                <condition id="-7" name="Compare time" sid="2483953872935176" type="System">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Time (seconds)">3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1371933742547626" type="System">
+                    <param id="0" name="Variable">loadOk</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="2380858774964353" type="Function">
+                    <param id="0" name="Name">&quot;loadComplete&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4013507531665001">
+            <conditions>
+                <condition id="0" name="On function" sid="4775560427504755" type="Function">
+                    <param id="0" name="Name">&quot;loadComplete&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="8685758880582643" type="System">
+                    <param id="0" name="Object to create">FadeParaPreto</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-6" name="Set height" sid="5420927622533291" type="FadeParaPreto">
+                    <param id="0" name="Height">WindowHeight</param>
+                </action>
+                <action id="-5" name="Set width" sid="5439619198426506" type="FadeParaPreto">
+                    <param id="0" name="Width">WindowWidth</param>
+                </action>
+                <action id="-16" name="Wait" sid="406545989003534" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="5462740406693554" type="System">
+                    <param id="0" name="Layout">Language</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

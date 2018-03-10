@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Language</name>
+    <events>
+        <event-block sid="7870984143241654">
+            <conditions>
+                <condition id="6" name="On update ready" sid="7030834223986768" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="9" name="Reload" sid="7808270756704616" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="1423056696206527">
+            <conditions>
+                <condition id="17" name="On tap object" sid="2186385355974735" type="Touch">
+                    <param id="0" name="Object">b_ptbr</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="5895688111109613" type="Audio">
+                    <param id="0" name="Audio file">selection</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;Select&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="9561253755776101" type="System">
+                    <param id="0" name="Variable">lang</param>
+                    <param id="1" name="Value">&quot;br&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="5311192010056741" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3611422905879357">
+            <conditions>
+                <condition id="17" name="On tap object" sid="645728797669619" type="Touch">
+                    <param id="0" name="Object">b_eng</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="4719654382440047" type="Audio">
+                    <param id="0" name="Audio file">selection</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;Select&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="774256389269925" type="System">
+                    <param id="0" name="Variable">lang</param>
+                    <param id="1" name="Value">&quot;eng&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="2738704950673431" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="4285939564630152">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="3257802398679143" type="Mouse">
+                    <param id="0" name="Object">b_ptbr</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="8377803196810789" type="Mouse">
+                    <param id="0" name="Object">b_eng</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="8978929715777844" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block any="1" sid="2171092640746184">
+                    <conditions>
+                        <condition id="0" name="On click" sid="2283118334917084" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="7174092853864846">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="4793436954851539" type="Mouse">
+                                    <param id="0" name="Object">b_ptbr</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="5234784630721238" type="Audio">
+                                    <param id="0" name="Audio file">selection</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Select&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6507724351090078" type="System">
+                                    <param id="0" name="Variable">lang</param>
+                                    <param id="1" name="Value">&quot;br&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="1340881639684163" type="System">
+                                    <param id="0" name="Layout">Menu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="3907343577657062">
+                    <conditions>
+                        <condition id="0" name="On click" sid="3283264626039093" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="14" name="On tap" sid="2293952450224446" type="Touch" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2175172623618396">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="1940861251063076" type="Mouse">
+                                    <param id="0" name="Object">b_eng</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="6030452709519219" type="Audio">
+                                    <param id="0" name="Audio file">selection</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Select&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5680123562901871" type="System">
+                                    <param id="0" name="Variable">lang</param>
+                                    <param id="1" name="Value">&quot;eng&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="358928787538539" type="System">
+                                    <param id="0" name="Layout">Menu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1845122385120742">
+            <conditions>
+                <condition id="-22" name="Else" sid="4362831605943921" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="3138240596841681" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment></comment>
+        <event-block any="1" sid="1959406334755134">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="8253120855632797" type="Mouse">
+                    <param id="0" name="Object">b_ptbr</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="2144541388164019" type="b_ptbr">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6428037999840098">
+            <conditions>
+                <condition id="-22" name="Else" sid="3280461489625055" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="4999673487919802" type="b_ptbr">
+                    <param id="0" name="Opacity">75</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="75929881078707">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="2229526555587812" type="Mouse">
+                    <param id="0" name="Object">b_eng</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="5237679628173434" type="b_eng">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8841158644541902">
+            <conditions>
+                <condition id="-22" name="Else" sid="6246108051323567" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="4863900940579395" type="b_eng">
+                    <param id="0" name="Opacity">75</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,2011 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>SURTO - CHRISdbhr game</name>
+    <description>Game based on Official Top Down Shooter game from Scirra, but with a lot of features.</description>
+    <version>1.08</version>
+    <author>CHRISdbhr</author>
+    <author-email>chrisdbhr@gmail.com</author-email>
+    <author-website>https://chrisdbhr.github.io</author-website>
+    <app-id></app-id>
+    <unique-id>29mmwl0uoj7bc</unique-id>
+    <saved-with-version>25500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Sun Temple" id="GoogleAnalytics_ST" version="1">Google Analytics</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="blurhorizontal">Blur Horizontal</effect>
+        <effect author="Scirra" id="blurvertical">Blur Vertical</effect>
+        <effect author="Scirra" id="brightness">Brightness</effect>
+        <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
+        <effect author="Scirra" id="grayscale">Grayscale</effect>
+        <effect author="Scirra" id="hsladjust">Adjust HSL</effect>
+        <effect author="Scirra" id="radialblur">Radial blur</effect>
+        <effect author="Scirra" id="tint">Tint</effect>
+        <effect author="Scirra" id="warp">Warp</effect>
+        <effect author="Viktor Korsun" id="water">Water</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>740</width>
+        <height>462</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Loading</first-layout>
+    <use-loader-layout>1</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Nothing (not recommended)</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">Yes</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="HUD">
+            <object-type name="HUDBack" sid="965051201255181">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3578409959503885" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\HUD_0001s_0002_HP-BACK.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Itens">
+            <object-type name="ItemAmmo" sid="8668946516586896">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="AmmoHere" sid="5778271144093985" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="9182857371843461">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="7088944899676311">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="orb" pingpong="0" repeatcount="1" repeatto="0" sid="9977491362025966" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\crystal_orb.png">
+                            <collision-poly>
+                                <point x="0.37" y="0.37" />
+                                <point x="0.495" y="0.32" />
+                                <point x="0.6275" y="0.37" />
+                                <point x="0.6675" y="0.49" />
+                                <point x="0.6225" y="0.6225" />
+                                <point x="0.5" y="0.67" />
+                                <point x="0.38" y="0.635" />
+                                <point x="0.3175" y="0.4975" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="maleta" pingpong="0" repeatcount="1" repeatto="0" sid="6642637659436894" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\item.png">
+                            <collision-poly>
+                                <point x="0.210938" y="0.210938" />
+                                <point x="0.5" y="0.117188" />
+                                <point x="0.78125" y="0.21875" />
+                                <point x="0.960938" y="0.5" />
+                                <point x="0.835938" y="0.835938" />
+                                <point x="0.164063" y="0.835938" />
+                                <point x="0.0351563" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ItemDano" sid="3103490052767422">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Item_loot" sid="1634980867447367" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="4873127859422718">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="2748085045225243">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="orb" pingpong="0" repeatcount="1" repeatto="0" sid="6167833655346501" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\crystal_orb.png">
+                            <collision-poly>
+                                <point x="0.37" y="0.37" />
+                                <point x="0.495" y="0.32" />
+                                <point x="0.6275" y="0.37" />
+                                <point x="0.6675" y="0.49" />
+                                <point x="0.6225" y="0.6225" />
+                                <point x="0.5" y="0.67" />
+                                <point x="0.38" y="0.635" />
+                                <point x="0.3175" y="0.4975" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="maleta" pingpong="0" repeatcount="1" repeatto="0" sid="9772269166142256" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\item.png">
+                            <collision-poly>
+                                <point x="0.210938" y="0.210938" />
+                                <point x="0.5" y="0.117188" />
+                                <point x="0.78125" y="0.21875" />
+                                <point x="0.960938" y="0.5" />
+                                <point x="0.835938" y="0.835938" />
+                                <point x="0.164063" y="0.835938" />
+                                <point x="0.0351563" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ItemLife" sid="5248025121287914">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Item_heal_factor" sid="2678756569453215" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="6509231456167645">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="3214622685801234">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="orb" pingpong="0" repeatcount="1" repeatto="0" sid="9366138794506851" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\crystal_orb.png">
+                            <collision-poly>
+                                <point x="0.37" y="0.37" />
+                                <point x="0.495" y="0.32" />
+                                <point x="0.6275" y="0.37" />
+                                <point x="0.6675" y="0.49" />
+                                <point x="0.6225" y="0.6225" />
+                                <point x="0.5" y="0.67" />
+                                <point x="0.38" y="0.635" />
+                                <point x="0.3175" y="0.4975" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="maleta" pingpong="0" repeatcount="1" repeatto="0" sid="5506523328097406" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\item.png">
+                            <collision-poly>
+                                <point x="0.210938" y="0.210938" />
+                                <point x="0.5" y="0.117188" />
+                                <point x="0.78125" y="0.21875" />
+                                <point x="0.960938" y="0.5" />
+                                <point x="0.835938" y="0.835938" />
+                                <point x="0.164063" y="0.835938" />
+                                <point x="0.0351563" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ItemMovement" sid="3571848018608842">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Item_loot" sid="1992097042662761" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="9106198766821407">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="5986185003130314">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="orb" pingpong="0" repeatcount="1" repeatto="0" sid="8288413120460471" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\crystal_orb.png">
+                            <collision-poly>
+                                <point x="0.37" y="0.37" />
+                                <point x="0.495" y="0.32" />
+                                <point x="0.6275" y="0.37" />
+                                <point x="0.6675" y="0.49" />
+                                <point x="0.6225" y="0.6225" />
+                                <point x="0.5" y="0.67" />
+                                <point x="0.38" y="0.635" />
+                                <point x="0.3175" y="0.4975" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="maleta" pingpong="0" repeatcount="1" repeatto="0" sid="7698920541869504" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\item.png">
+                            <collision-poly>
+                                <point x="0.210938" y="0.210938" />
+                                <point x="0.5" y="0.117188" />
+                                <point x="0.78125" y="0.21875" />
+                                <point x="0.960938" y="0.5" />
+                                <point x="0.835938" y="0.835938" />
+                                <point x="0.164063" y="0.835938" />
+                                <point x="0.0351563" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ItemRateOfFire" sid="2108992302432592">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Item_loot" sid="4808029783620483" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="273458507424858">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="8225109568707295">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="orb" pingpong="0" repeatcount="1" repeatto="0" sid="3243006167071651" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\crystal_orb.png">
+                            <collision-poly>
+                                <point x="0.37" y="0.37" />
+                                <point x="0.495" y="0.32" />
+                                <point x="0.6275" y="0.37" />
+                                <point x="0.6675" y="0.49" />
+                                <point x="0.6225" y="0.6225" />
+                                <point x="0.5" y="0.67" />
+                                <point x="0.38" y="0.635" />
+                                <point x="0.3175" y="0.4975" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="maleta" pingpong="0" repeatcount="1" repeatto="0" sid="1895852442123018" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\item.png">
+                            <collision-poly>
+                                <point x="0.210938" y="0.210938" />
+                                <point x="0.5" y="0.117188" />
+                                <point x="0.78125" y="0.21875" />
+                                <point x="0.960938" y="0.5" />
+                                <point x="0.835938" y="0.835938" />
+                                <point x="0.164063" y="0.835938" />
+                                <point x="0.0351563" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TimedAmmo" sid="6551695938603421">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="AmmoHere" sid="9744222752644386" type="number" />
+                    <instance-variable name="in_action" sid="5210746538537956" type="string" />
+                    <instance-variable name="where_appear" sid="3491247663369868" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Fade" sid="9609191583225159">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="3106886375016421">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="orb" pingpong="0" repeatcount="1" repeatto="0" sid="959809892721141" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\crystal_orb.png">
+                            <collision-poly>
+                                <point x="0.37" y="0.37" />
+                                <point x="0.495" y="0.32" />
+                                <point x="0.6275" y="0.37" />
+                                <point x="0.6675" y="0.49" />
+                                <point x="0.6225" y="0.6225" />
+                                <point x="0.5" y="0.67" />
+                                <point x="0.38" y="0.635" />
+                                <point x="0.3175" y="0.4975" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="maleta" pingpong="0" repeatcount="1" repeatto="0" sid="431982107048074" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\item.png">
+                            <collision-poly>
+                                <point x="0.210938" y="0.210938" />
+                                <point x="0.5" y="0.117188" />
+                                <point x="0.78125" y="0.21875" />
+                                <point x="0.960938" y="0.5" />
+                                <point x="0.835938" y="0.835938" />
+                                <point x="0.164063" y="0.835938" />
+                                <point x="0.0351563" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Intro" />
+        <object-type name="chaoBg" sid="8660411795014609">
+            <plugin id="TiledBg" />
+            <texture original-source="H:\epidemia\chão.png" />
+        </object-type>
+        <object-type name="PLAYER" sid="9644241016366798">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Vida" sid="8858484509797522" type="number" />
+                <instance-variable name="MaxVida" sid="6077502768193193" type="number" />
+                <instance-variable name="Speed" sid="9734128198042805" type="number" />
+                <instance-variable name="Dano" sid="9318208853927437" type="number" />
+                <instance-variable name="CadenciaDeTiros" sid="990148174217158" type="number" />
+                <instance-variable name="BALAS_NA_ARMA" sid="3537031281661141" type="number" />
+                <instance-variable name="BALAS_NO_INV" sid="4506185450623386" type="number" />
+                <instance-variable name="CAP_PENTE_ARMA" sid="989219282746347" type="number" />
+                <instance-variable name="TempoUltimoTiro" sid="7399327379194893" type="number" />
+                <instance-variable name="Hit_sound" sid="8493654347892662" type="number" />
+                <instance-variable name="Level" sid="1090989504732197" type="number" />
+                <instance-variable name="WeaponSelected" sid="3205673578041084" type="string" />
+                <instance-variable name="Life_percent" sid="5953228015337356" type="number" />
+                <instance-variable name="RELOAD_TIME" sid="8724661547580218" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="1493488590619711">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="6396315624825773">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="2683324078235202">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="5560793625883505">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Pistol" pingpong="1" repeatcount="1" repeatto="0" sid="5095039673364358" speed="7">
+                    <frame duration="1" hotspotX="0.194872" hotspotY="0.491667" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\p1-parado.png">
+                        <image-point name="Imagepoint 1" x="0.984615" y="0.679167" />
+                        <collision-poly>
+                            <point x="0.0641026" y="0.366667" />
+                            <point x="0.125641" y="0.104167" />
+                            <point x="0.235897" y="0.0500003" />
+                            <point x="0.523077" y="0.7125" />
+                            <point x="0.892308" y="0.725" />
+                            <point x="0.610257" y="0.858333" />
+                            <point x="0.251282" y="0.891667" />
+                            <point x="0.0487179" y="0.616667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.194872" hotspotY="0.491667" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\p1-andando1.png">
+                        <image-point name="Imagepoint 1" x="0.984615" y="0.679167" />
+                        <collision-poly>
+                            <point x="0.0641026" y="0.366667" />
+                            <point x="0.125641" y="0.104167" />
+                            <point x="0.235897" y="0.0500003" />
+                            <point x="0.523077" y="0.7125" />
+                            <point x="0.982052" y="0.670833" />
+                            <point x="0.738462" y="0.808333" />
+                            <point x="0.251282" y="0.891667" />
+                            <point x="0.0487179" y="0.616667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.194872" hotspotY="0.491667" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\p1-andando2.png">
+                        <image-point name="Imagepoint 1" x="0.984615" y="0.679167" />
+                        <collision-poly>
+                            <point x="0.0641026" y="0.366667" />
+                            <point x="0.125641" y="0.104167" />
+                            <point x="0.235897" y="0.0500003" />
+                            <point x="0.523077" y="0.7125" />
+                            <point x="0.982052" y="0.670833" />
+                            <point x="0.738462" y="0.808333" />
+                            <point x="0.251282" y="0.891667" />
+                            <point x="0.0487179" y="0.616667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="Flamethrower" pingpong="1" repeatcount="1" repeatto="0" sid="1847038271776726" speed="7">
+                    <frame duration="1" hotspotX="0.197436" hotspotY="0.683333" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\p2-parado.png">
+                        <image-point name="Imagepoint 1" x="0.969231" y="0.683333" />
+                        <collision-poly>
+                            <point x="0.323077" y="0.0416667" />
+                            <point x="0.538462" y="0.2" />
+                            <point x="0.676923" y="0.516667" />
+                            <point x="0.497435" y="0.779166" />
+                            <point x="0.302564" y="0.8625" />
+                            <point x="0.148718" y="0.729167" />
+                            <point x="0.1" y="0.275" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.197436" hotspotY="0.683333" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\p2-andando1.png">
+                        <image-point name="Imagepoint 1" x="0.969231" y="0.683333" />
+                        <collision-poly>
+                            <point x="0.323077" y="0.0416667" />
+                            <point x="0.538462" y="0.2" />
+                            <point x="0.676923" y="0.516667" />
+                            <point x="0.497435" y="0.779166" />
+                            <point x="0.302564" y="0.8625" />
+                            <point x="0.148718" y="0.729167" />
+                            <point x="0.1" y="0.275" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.197436" hotspotY="0.683333" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\p2-andando2.png">
+                        <image-point name="Imagepoint 1" x="0.969231" y="0.683333" />
+                        <collision-poly>
+                            <point x="0.323077" y="0.0416667" />
+                            <point x="0.538462" y="0.2" />
+                            <point x="0.676923" y="0.516667" />
+                            <point x="0.497435" y="0.779166" />
+                            <point x="0.302564" y="0.8625" />
+                            <point x="0.148718" y="0.729167" />
+                            <point x="0.1" y="0.275" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="Machinegun" pingpong="1" repeatcount="1" repeatto="0" sid="1348839715652346" speed="7">
+                    <frame duration="1" hotspotX="0.130769" hotspotY="0.754167" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\p3-parado.png">
+                        <image-point name="Imagepoint 1" x="0.848718" y="0.7625" />
+                        <collision-poly>
+                            <point x="0.192308" y="0.0791667" />
+                            <point x="0.333333" y="0.1" />
+                            <point x="0.587179" y="0.6625" />
+                            <point x="0.697437" y="0.729167" />
+                            <point x="0.430769" y="0.841667" />
+                            <point x="0.112821" y="0.883333" />
+                            <point x="0.0179487" y="0.795833" />
+                            <point x="0.025641" y="0.354167" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.130769" hotspotY="0.754167" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\p3-andando1.png">
+                        <image-point name="Imagepoint 1" x="0.848718" y="0.7625" />
+                        <collision-poly>
+                            <point x="0.192308" y="0.0791667" />
+                            <point x="0.333333" y="0.1" />
+                            <point x="0.587179" y="0.6625" />
+                            <point x="0.697437" y="0.729167" />
+                            <point x="0.430769" y="0.841667" />
+                            <point x="0.112821" y="0.883333" />
+                            <point x="0.0179487" y="0.795833" />
+                            <point x="0.025641" y="0.354167" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.130769" hotspotY="0.754167" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\p3-andando2.png">
+                        <image-point name="Imagepoint 1" x="0.848718" y="0.7625" />
+                        <collision-poly>
+                            <point x="0.192308" y="0.0791667" />
+                            <point x="0.333333" y="0.1" />
+                            <point x="0.587179" y="0.6625" />
+                            <point x="0.697437" y="0.729167" />
+                            <point x="0.430769" y="0.841667" />
+                            <point x="0.112821" y="0.883333" />
+                            <point x="0.0179487" y="0.795833" />
+                            <point x="0.025641" y="0.354167" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="1152397070406531">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="MONSTER" sid="5702880390348118">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Vida" sid="9765868058257541" type="number" />
+                <instance-variable name="Dano_por_toque" sid="9317975033653829" type="number" />
+                <instance-variable name="ValorScore" sid="3015423389273939" type="number" />
+                <instance-variable name="Brilho" sid="9934111360953864" type="number" />
+                <instance-variable name="FireGlow" sid="2478247406891992" type="number" />
+                <instance-variable comment="0 = ammo (branco); 1 = vida (verde); 2 = dano (verm); 3 = veloc (azul); 4 = rate_of_fire (amar)" name="Item_a_dropar" sid="980154587164629" type="number" />
+                <instance-variable comment="0=top_left; 1=top_right ...." name="spawn_point" sid="5385537835355483" type="number" />
+                <instance-variable name="Spawn_X" sid="793926821395927" type="number" />
+                <instance-variable name="Spawn_Y" sid="9889407903097424" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="4776991751485112">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="17763469194879">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="AdjustHSL">
+                    <effect id="hsladjust" />
+                </effect-type>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+                <effect-type name="GlowVertical">
+                    <effect id="glowvertical" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="8302002566447534" speed="7">
+                    <frame duration="1" hotspotX="0.198459" hotspotY="0.454545" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\inimigo-andando1.png">
+                        <collision-poly>
+                            <point x="0.845857" y="0.294671" />
+                            <point x="0.944123" y="0.473354" />
+                            <point x="0.460501" y="0.413793" />
+                            <point x="0.306359" y="0.768025" />
+                            <point x="0.0905588" y="0.783699" />
+                            <point x="0.0327553" y="0.373041" />
+                            <point x="0.138728" y="0.216301" />
+                            <point x="0.352601" y="0.166144" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.198459" hotspotY="0.454545" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\inimigo-parado.png">
+                        <collision-poly>
+                            <point x="0.845857" y="0.294671" />
+                            <point x="0.944123" y="0.473354" />
+                            <point x="0.460501" y="0.413793" />
+                            <point x="0.306359" y="0.768025" />
+                            <point x="0.0905588" y="0.783699" />
+                            <point x="0.0327553" y="0.373041" />
+                            <point x="0.138728" y="0.216301" />
+                            <point x="0.352601" y="0.166144" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.198459" hotspotY="0.454545" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\inimigo-andando2.png">
+                        <collision-poly>
+                            <point x="0.845857" y="0.294671" />
+                            <point x="0.944123" y="0.473354" />
+                            <point x="0.460501" y="0.413793" />
+                            <point x="0.306359" y="0.768025" />
+                            <point x="0.0905588" y="0.783699" />
+                            <point x="0.0327553" y="0.373041" />
+                            <point x="0.138728" y="0.216301" />
+                            <point x="0.352601" y="0.166144" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bullet" sid="8618175113057943">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="2311210293633194">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="9200183279494199">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8461635751801205" speed="5">
+                    <frame duration="1" hotspotX="0.15" hotspotY="0.466667" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\bullet.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.1" y="0.670833" />
+                            <point x="0.1" y="0.270833" />
+                            <point x="0.5" y="0.266667" />
+                            <point x="0.871875" y="0.495833" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lanterna" sid="5105263123409784">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8261778412360291" speed="5">
+                    <frame duration="1" hotspotX="0.143885" hotspotY="0.504762" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\Lanterna4.png">
+                        <collision-poly>
+                            <point x="0.475" y="0.475" />
+                            <point x="0.5" y="0.464" />
+                            <point x="0.527" y="0.473" />
+                            <point x="0.8035" y="0.5" />
+                            <point x="0.5265" y="0.5265" />
+                            <point x="0.5" y="0.5355" />
+                            <point x="0.475" y="0.525" />
+                            <point x="0.4645" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GunFire" sid="8893504963726059">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="7121540398589797">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8890078783836464" speed="5">
+                    <frame duration="1" hotspotX="0.123047" hotspotY="0.47432" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\GunFire.png">
+                        <collision-poly>
+                            <point x="0.705078" y="0.456193" />
+                            <point x="0.712891" y="0.498489" />
+                            <point x="0.685547" y="0.513595" />
+                            <point x="0.5" y="0.595166" />
+                            <point x="0.193359" y="0.700906" />
+                            <point x="0.0644531" y="0.498489" />
+                            <point x="0.175781" y="0.271903" />
+                            <point x="0.5" y="0.39577" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Flame" pingpong="0" repeatcount="1" repeatto="0" sid="2873659920392922" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\FireShot.png">
+                        <collision-poly>
+                            <point x="0.612857" y="0.612857" />
+                            <point x="0.5" y="0.691429" />
+                            <point x="0.331429" y="0.668571" />
+                            <point x="0.33" y="0.5" />
+                            <point x="0.268571" y="0.268571" />
+                            <point x="0.5" y="0.132857" />
+                            <point x="0.702857" y="0.297143" />
+                            <point x="0.721429" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HP" sid="830380843252805">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="HUDLifeBar" sid="7496412978016894">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154598990101215" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\HUD_0001s_0001_HP.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="2028040995005491">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="selectplayerBG" sid="8154685402271118">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Magnum" pingpong="0" repeatcount="1" repeatto="0" sid="3497967571415303" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\SelectBack1.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.225" />
+                            <point x="0.5" y="0.09375" />
+                            <point x="0.85" y="0.225" />
+                            <point x="0.918056" y="0.5" />
+                            <point x="0.916667" y="0.875" />
+                            <point x="0.5" y="0.933333" />
+                            <point x="0.122222" y="0.816667" />
+                            <point x="0.0819444" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Flame" pingpong="0" repeatcount="1" repeatto="0" sid="8182310675625061" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\SelectBack2.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.225" />
+                            <point x="0.5" y="0.09375" />
+                            <point x="0.85" y="0.225" />
+                            <point x="0.918056" y="0.5" />
+                            <point x="0.916667" y="0.875" />
+                            <point x="0.5" y="0.933333" />
+                            <point x="0.122222" y="0.816667" />
+                            <point x="0.0819444" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Rifle" pingpong="0" repeatcount="1" repeatto="0" sid="2869910639127755" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\SelectBack3.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.225" />
+                            <point x="0.5" y="0.09375" />
+                            <point x="0.85" y="0.225" />
+                            <point x="0.918056" y="0.5" />
+                            <point x="0.916667" y="0.875" />
+                            <point x="0.5" y="0.933333" />
+                            <point x="0.122222" y="0.816667" />
+                            <point x="0.0819444" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="p_de" sid="1682823141148549">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2660311015483751" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\p1-andando1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="p_f" sid="2676836444997472">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2688897705800946" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\p2-andando1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="p_m" sid="9847291698715942">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6209814883234553" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\p3-andando1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="6598702728796612">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Cursor" sid="5127509420702185">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Cursor_Pos" sid="5200592970839899" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="378857353341346" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\crosshair.png">
+                        <collision-poly>
+                            <point x="0.032107" y="0.032107" />
+                            <point x="0.0498328" y="0" />
+                            <point x="0.0682274" y="0.0317726" />
+                            <point x="0.0996656" y="0.0498328" />
+                            <point x="0.0698997" y="0.0698997" />
+                            <point x="0.0498328" y="0.0996656" />
+                            <point x="0.0297659" y="0.0702341" />
+                            <point x="0" y="0.0498328" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="waves" sid="1320477373291067">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Warp">
+                    <effect id="warp" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4256880906458973" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\monstro.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SURTOlogo" sid="3539890109076197">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6843856192885624" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\menuSurto.png">
+                        <collision-poly>
+                            <point x="0" y="0.403921" />
+                            <point x="0.491227" y="0.0222868" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0.491227" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="NovoJogo" sid="7580603399281292">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="2950415929967286">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3626422003065763" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\StartGame.png">
+                        <collision-poly>
+                            <point x="0" y="0.0294118" />
+                            <point x="1" y="0.0294118" />
+                            <point x="1" y="0.970588" />
+                            <point x="0" y="0.970588" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="eng" pingpong="0" repeatcount="1" repeatto="0" sid="9571902244264219" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509804">
+                        <collision-poly>
+                            <point x="0" y="0.0294118" />
+                            <point x="1" y="0.0294118" />
+                            <point x="1" y="0.970588" />
+                            <point x="0" y="0.970588" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Monster_Slain" sid="3210292787679168">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="8845900934774746">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="AdjustHSL">
+                    <effect id="hsladjust" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2187735543459811" speed="5">
+                    <frame duration="1" hotspotX="0.217726" hotspotY="0.573668" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\inimigo-morto.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="efeito" sid="3402726160516152">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5310854858543653" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\menuSurto.png">
+                        <collision-poly>
+                            <point x="0" y="0.403921" />
+                            <point x="0.491227" y="0.0222868" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0.491227" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CAMERA" sid="4879133009702696">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="2467728744269214">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5683350087882058" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bullet_Shot_Light" sid="6408298740820113">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="7516722462485913">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="649008184166107" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FLAME" sid="2742945189562436">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="4108759016509602">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="8391421837976846">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6616641644966863" speed="5">
+                    <frame duration="1" hotspotX="0.478571" hotspotY="0.528571" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\Flame2.png">
+                        <collision-poly>
+                            <point x="0.343719" y="0.330035" />
+                            <point x="0.485868" y="0.284201" />
+                            <point x="0.611391" y="0.339583" />
+                            <point x="0.652955" y="0.473264" />
+                            <point x="0.611391" y="0.629861" />
+                            <point x="0.487531" y="0.669011" />
+                            <point x="0.358682" y="0.622222" />
+                            <point x="0.297168" y="0.480903" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AmmoAtual" sid="5441524555987011">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="developersName" sid="8879168213445667">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="GoW_Like_Damage" sid="4255858497219301">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8823301356187768" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\red glow.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FlameHit" sid="4744890182559339">
+            <plugin id="Particles" />
+            <texture original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\Flame2.png" />
+        </object-type>
+        <object-type name="maxAmmoText" sid="1798172623816371">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="luzNoJogador" sid="2238522571853909">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4037739764971712" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="luzNaMira" sid="4854401510309338">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4419901057957493" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Flame_Light" sid="6191984653944994">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="7251220084467689">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1964461175145622" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Foco_Na_ajuda" sid="8254591021463707">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4167797113178243" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HUDbg" sid="4684750926943797">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8889060115935543" speed="5">
+                    <frame duration="1" hotspotX="0.502439" hotspotY="0.513158" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\HUDbg.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.497041" y="1" />
+                            <point x="0.12426" y="0.666667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="critical" pingpong="0" repeatcount="1" repeatto="0" sid="4207148257712504" speed="6">
+                    <frame duration="1" hotspotX="0.502439" hotspotY="0.513158" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\Hudbg_critical.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.497041" y="1" />
+                            <point x="0.12426" y="0.666667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502439" hotspotY="0.513158" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\HUDbg.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.497041" y="1" />
+                            <point x="0.12426" y="0.666667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="alert" pingpong="0" repeatcount="1" repeatto="0" sid="1246291341651088" speed="5">
+                    <frame duration="1" hotspotX="0.502439" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\HUDbg.png">
+                        <collision-poly>
+                            <point x="0.165854" y="0.447368" />
+                            <point x="0.497561" y="0.0789474" />
+                            <point x="0.907317" y="0.25" />
+                            <point x="0.907317" y="0.75" />
+                            <point x="0.497561" y="0.907895" />
+                            <point x="0.180488" y="0.513158" />
+                            <point x="0.180488" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502439" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\Hudbg_alert.png">
+                        <collision-poly>
+                            <point x="0.141463" y="0.381579" />
+                            <point x="0.497561" y="0.0657895" />
+                            <point x="0.912195" y="0.236842" />
+                            <point x="0.912195" y="0.763158" />
+                            <point x="0.497561" y="0.921053" />
+                            <point x="0.17561" y="0.526316" />
+                            <point x="0.170732" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayerLevel" sid="660951616983329">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="HUDbg_right" sid="4511645790572467">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7723541743871626" speed="5">
+                    <frame duration="1" hotspotX="0.502439" hotspotY="0.513158" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\HUDbg.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.87574" y="0.666667" />
+                            <point x="0.497041" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="critical" pingpong="0" repeatcount="1" repeatto="0" sid="9510448295759819" speed="10">
+                    <frame duration="1" hotspotX="0.497561" hotspotY="0.513158" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\Hudbg_critical.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.497041" y="1" />
+                            <point x="0.12426" y="0.666667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502439" hotspotY="0.513158" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\HUDbg.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.87574" y="0.666667" />
+                            <point x="0.497041" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="alert" pingpong="0" repeatcount="1" repeatto="0" sid="1537984356542008" speed="5">
+                    <frame duration="1" hotspotX="0.497561" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\HUDbg.png">
+                        <collision-poly>
+                            <point x="0.52" y="0.5" />
+                            <point x="0.62" y="0.366667" />
+                            <point x="0.5" y="0.6" />
+                            <point x="0.06" y="0.9" />
+                            <point x="0.12" y="0.5" />
+                            <point x="0.1" y="0.166667" />
+                            <point x="0.5" y="0.0666667" />
+                            <point x="0.96" y="0.0666667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502439" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\Hudbg_alert.png">
+                        <collision-poly>
+                            <point x="0.829268" y="0.5" />
+                            <point x="0.82439" y="0.526316" />
+                            <point x="0.502439" y="0.921053" />
+                            <point x="0.0878049" y="0.763158" />
+                            <point x="0.0878049" y="0.236842" />
+                            <point x="0.502439" y="0.0657895" />
+                            <point x="0.858537" y="0.381579" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WeaponSelected" sid="9185690378288097">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="HUDWeaponSelcted" sid="9481003407200006">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="DesertEagle" pingpong="0" repeatcount="1" repeatto="0" sid="19545303831205" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.533333" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\pistol.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Lançachamas" pingpong="0" repeatcount="1" repeatto="0" sid="6745764119779829" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\flamettt.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Metralhadora" pingpong="0" repeatcount="1" repeatto="0" sid="9314145803465658" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\assaultrrr.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AmmoNoInvent" sid="7856759035538226">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="pontosText" sid="3761327802698137">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text" sid="6279890643591022">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="SCORE" sid="6037518852564468">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="MonsterSpawner" sid="7328601868188056">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="0=topo;1=dir;2=baixo;3=esq" name="lado" sid="6727434422548625" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1274663985264931" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\crosshair.png">
+                        <collision-poly>
+                            <point x="0.28" y="0.28" />
+                            <point x="0.48" y="0.04" />
+                            <point x="0.72" y="0.28" />
+                            <point x="0.96" y="0.48" />
+                            <point x="0.48" y="0.96" />
+                            <point x="0.28" y="0.72" />
+                            <point x="0.04" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="6241220682882705">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Text2" sid="8822427221620606">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Item_Show_get" sid="9806865136460084">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="4714073339120749">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="HUDLifeLast" sid="6389221386833703">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9160233596023598" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\HUD\HUD_0001s_0001_HP.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="respawn_damage_area" sid="2135724319056884">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Water">
+                    <effect id="water" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8789233661264892" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\degrade.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.925" y="0" />
+                            <point x="0.925" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PointerToAmoo" sid="8220476114326764">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7799337231500756" speed="20">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\Pointer to ammo.png">
+                        <collision-poly>
+                            <point x="0.95" y="0.25" />
+                            <point x="0.99" y="0.5" />
+                            <point x="0.95" y="0.75" />
+                            <point x="0.88" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\Pointer to ammo.png">
+                        <collision-poly>
+                            <point x="0.95" y="0.25" />
+                            <point x="0.99" y="0.5" />
+                            <point x="0.95" y="0.75" />
+                            <point x="0.88" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\Pointer to ammo.png">
+                        <collision-poly>
+                            <point x="0.95" y="0.25" />
+                            <point x="0.99" y="0.5" />
+                            <point x="0.95" y="0.75" />
+                            <point x="0.88" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gun_turret1" sid="5696807453637778">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="dano" sid="6994383952339951" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Turret" sid="3602519934048571">
+                    <behavior id="Turret" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="7384307343820474">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="95260311338522" speed="5">
+                    <frame duration="1" hotspotX="0.229358" hotspotY="0.575758" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\gun_turrent_disabled.png">
+                        <image-point name="Imagepoint 1" x="1" y="0.606061" />
+                        <collision-poly>
+                            <point x="0.208716" y="0.318182" />
+                            <point x="0.444954" y="0.212121" />
+                            <point x="0.458716" y="0.484848" />
+                            <point x="1" y="0.484848" />
+                            <point x="0.997707" y="0.780303" />
+                            <point x="0.474771" y="0.712121" />
+                            <point x="0.37844" y="1" />
+                            <point x="0.0114679" y="0.606061" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="gun_on" pingpong="0" repeatcount="1" repeatto="0" sid="5145428523209875" speed="5">
+                    <frame duration="1" hotspotX="0.179856" hotspotY="0.533333" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\gun_turrent.png">
+                        <image-point name="Imagepoint 1" x="0.784173" y="0.555556" />
+                        <image-point name="Imagepoint 2" x="0.309353" y="0.488889" />
+                        <collision-poly>
+                            <point x="0.122302" y="0.377778" />
+                            <point x="0.496403" y="0.466667" />
+                            <point x="0.784173" y="0.488889" />
+                            <point x="0.496403" y="0.644444" />
+                            <point x="0.0935252" y="0.711111" />
+                            <point x="0" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bullet_turret" sid="8070841150505228">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="9888405215292989">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="1876042502397757">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8162456310228747" speed="5">
+                    <frame duration="1" hotspotX="0.15" hotspotY="0.466667" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\bullet.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.1" y="0.670833" />
+                            <point x="0.1" y="0.270833" />
+                            <point x="0.5" y="0.266667" />
+                            <point x="0.871875" y="0.495833" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Minigun_light1" sid="4528233909036643">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9339742274468178" speed="5">
+                    <frame duration="1" hotspotX="0.143885" hotspotY="0.504762" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\Lanterna4.png">
+                        <collision-poly>
+                            <point x="0.475" y="0.475" />
+                            <point x="0.5" y="0.464" />
+                            <point x="0.527" y="0.473" />
+                            <point x="0.8035" y="0.5" />
+                            <point x="0.5265" y="0.5265" />
+                            <point x="0.5" y="0.5355" />
+                            <point x="0.475" y="0.525" />
+                            <point x="0.4645" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gun_base" sid="9847708615685807">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4089953838301023" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\gun_base.png">
+                        <collision-poly>
+                            <point x="0.04" y="0.04" />
+                            <point x="0.5" y="0.38" />
+                            <point x="0.94" y="0.06" />
+                            <point x="0.62" y="0.5" />
+                            <point x="0.98" y="0.98" />
+                            <point x="0.5" y="0.66" />
+                            <point x="0.04" y="0.96" />
+                            <point x="0.4" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GunFire2" sid="3294757336401791">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="4060019997323934">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9484356711940266" speed="5">
+                    <frame duration="1" hotspotX="0.123047" hotspotY="0.47432" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\GunFire.png">
+                        <collision-poly>
+                            <point x="0.705078" y="0.456193" />
+                            <point x="0.712891" y="0.498489" />
+                            <point x="0.685547" y="0.513595" />
+                            <point x="0.5" y="0.595166" />
+                            <point x="0.193359" y="0.700906" />
+                            <point x="0.0644531" y="0.498489" />
+                            <point x="0.175781" y="0.271903" />
+                            <point x="0.5" y="0.39577" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Flame" pingpong="0" repeatcount="1" repeatto="0" sid="7743718556980583" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\FireShot.png">
+                        <collision-poly>
+                            <point x="0.612857" y="0.612857" />
+                            <point x="0.5" y="0.691429" />
+                            <point x="0.331429" y="0.668571" />
+                            <point x="0.33" y="0.5" />
+                            <point x="0.268571" y="0.268571" />
+                            <point x="0.5" y="0.132857" />
+                            <point x="0.702857" y="0.297143" />
+                            <point x="0.721429" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gun_turret2" sid="3312687043078433">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="dano" sid="8281909064150433" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Turret" sid="9297269065551061">
+                    <behavior id="Turret" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="7198303029737974">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2756675937745311" speed="5">
+                    <frame duration="1" hotspotX="0.229358" hotspotY="0.575758" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\gun_turrent_disabled.png">
+                        <image-point name="Imagepoint 1" x="1" y="0.606061" />
+                        <collision-poly>
+                            <point x="0.208716" y="0.318182" />
+                            <point x="0.444954" y="0.212121" />
+                            <point x="0.458716" y="0.484848" />
+                            <point x="1" y="0.484848" />
+                            <point x="0.997707" y="0.780303" />
+                            <point x="0.474771" y="0.712121" />
+                            <point x="0.37844" y="1" />
+                            <point x="0.0114679" y="0.606061" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="gun_on" pingpong="0" repeatcount="1" repeatto="0" sid="1186858182557395" speed="5">
+                    <frame duration="1" hotspotX="0.179856" hotspotY="0.533333" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\gun_turrent.png">
+                        <image-point name="Imagepoint 1" x="0.784173" y="0.555556" />
+                        <image-point name="Imagepoint 2" x="0.309353" y="0.488889" />
+                        <collision-poly>
+                            <point x="0.122302" y="0.377778" />
+                            <point x="0.496403" y="0.466667" />
+                            <point x="0.784173" y="0.488889" />
+                            <point x="0.496403" y="0.644444" />
+                            <point x="0.0935252" y="0.711111" />
+                            <point x="0" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gun_turret3" sid="9167196644510359">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="dano" sid="425358519020737" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Turret" sid="8117950926225296">
+                    <behavior id="Turret" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="1532510504289319">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9279174663117213" speed="5">
+                    <frame duration="1" hotspotX="0.229358" hotspotY="0.575758" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\gun_turrent_disabled.png">
+                        <image-point name="Imagepoint 1" x="1" y="0.606061" />
+                        <collision-poly>
+                            <point x="0.208716" y="0.318182" />
+                            <point x="0.444954" y="0.212121" />
+                            <point x="0.458716" y="0.484848" />
+                            <point x="1" y="0.484848" />
+                            <point x="0.997707" y="0.780303" />
+                            <point x="0.474771" y="0.712121" />
+                            <point x="0.37844" y="1" />
+                            <point x="0.0114679" y="0.606061" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="gun_on" pingpong="0" repeatcount="1" repeatto="0" sid="865899759550911" speed="5">
+                    <frame duration="1" hotspotX="0.179856" hotspotY="0.533333" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\gun_turrent.png">
+                        <image-point name="Imagepoint 1" x="0.784173" y="0.555556" />
+                        <image-point name="Imagepoint 2" x="0.309353" y="0.488889" />
+                        <collision-poly>
+                            <point x="0.122302" y="0.377778" />
+                            <point x="0.496403" y="0.466667" />
+                            <point x="0.784173" y="0.488889" />
+                            <point x="0.496403" y="0.644444" />
+                            <point x="0.0935252" y="0.711111" />
+                            <point x="0" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gun_turret4" sid="2031740358435627">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="dano" sid="4032033536336669" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Turret" sid="8990680985476824">
+                    <behavior id="Turret" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="9143212650302339">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="25632800465477" speed="5">
+                    <frame duration="1" hotspotX="0.229358" hotspotY="0.575758" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\gun_turrent_disabled.png">
+                        <image-point name="Imagepoint 1" x="1" y="0.606061" />
+                        <collision-poly>
+                            <point x="0.208716" y="0.318182" />
+                            <point x="0.444954" y="0.212121" />
+                            <point x="0.458716" y="0.484848" />
+                            <point x="1" y="0.484848" />
+                            <point x="0.997707" y="0.780303" />
+                            <point x="0.474771" y="0.712121" />
+                            <point x="0.37844" y="1" />
+                            <point x="0.0114679" y="0.606061" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="gun_on" pingpong="0" repeatcount="1" repeatto="0" sid="9867704445910793" speed="5">
+                    <frame duration="1" hotspotX="0.179856" hotspotY="0.533333" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\gun_turrent.png">
+                        <image-point name="Imagepoint 1" x="0.784173" y="0.555556" />
+                        <image-point name="Imagepoint 2" x="0.309353" y="0.488889" />
+                        <collision-poly>
+                            <point x="0.122302" y="0.377778" />
+                            <point x="0.496403" y="0.466667" />
+                            <point x="0.784173" y="0.488889" />
+                            <point x="0.496403" y="0.644444" />
+                            <point x="0.0935252" y="0.711111" />
+                            <point x="0" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text4" sid="7713489029783451">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="FadeParaLayout" sid="4247838235977431">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="7554345316789798">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="409003492336077" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gameOverBG" sid="3345457426378014">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="11318919974262" speed="5">
+                    <frame duration="1" hotspotX="-0.456284" hotspotY="-0.206667" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\youdied.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SHOWSCORE" sid="8546536470489275">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Minigun_light2" sid="3209765131680998">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1849986550234812" speed="5">
+                    <frame duration="1" hotspotX="0.143885" hotspotY="0.504762" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\Lanterna4.png">
+                        <collision-poly>
+                            <point x="0.475" y="0.475" />
+                            <point x="0.5" y="0.464" />
+                            <point x="0.527" y="0.473" />
+                            <point x="0.8035" y="0.5" />
+                            <point x="0.5265" y="0.5265" />
+                            <point x="0.5" y="0.5355" />
+                            <point x="0.475" y="0.525" />
+                            <point x="0.4645" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Minigun_light3" sid="8158085271457343">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3056057272750825" speed="5">
+                    <frame duration="1" hotspotX="0.143885" hotspotY="0.504762" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\Lanterna4.png">
+                        <collision-poly>
+                            <point x="0.475" y="0.475" />
+                            <point x="0.5" y="0.464" />
+                            <point x="0.527" y="0.473" />
+                            <point x="0.8035" y="0.5" />
+                            <point x="0.5265" y="0.5265" />
+                            <point x="0.5" y="0.5355" />
+                            <point x="0.475" y="0.525" />
+                            <point x="0.4645" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Minigun_light4" sid="295244891429545">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5785190486834578" speed="5">
+                    <frame duration="1" hotspotX="0.143885" hotspotY="0.504762" original-source="G:\Google Drive\FACULDADE\Introdução ao Desenvolvimento de Jogos - ARTUR\Aula 02-06\C. Aliens\Sprites\Lanterna4.png">
+                        <collision-poly>
+                            <point x="0.475" y="0.475" />
+                            <point x="0.5" y="0.464" />
+                            <point x="0.527" y="0.473" />
+                            <point x="0.8035" y="0.5" />
+                            <point x="0.5265" y="0.5265" />
+                            <point x="0.5" y="0.5355" />
+                            <point x="0.475" y="0.525" />
+                            <point x="0.4645" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="2123628927642131">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="loadingCircle" sid="1213469272117389">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="6001969110055569">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="7978519865965729">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7831354829884375" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\Imagens\material\1sp1o.png">
+                        <collision-poly>
+                            <point x="0.179487" y="0.179487" />
+                            <point x="0.5" y="0.0384615" />
+                            <point x="0.820513" y="0.179487" />
+                            <point x="0.961538" y="0.5" />
+                            <point x="0.820513" y="0.820513" />
+                            <point x="0.5" y="0.961538" />
+                            <point x="0.179487" y="0.820513" />
+                            <point x="0.0384615" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="loadText" sid="8430504579980309">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="FadeParaPreto" sid="8509294672148653">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Fade" sid="14880684698097">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="CursorSprite" sid="1738770767793888">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="normal" pingpong="0" repeatcount="1" repeatto="0" sid="9593649615555639" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.52">
+                        <collision-poly>
+                            <point x="0.44" y="0.44" />
+                            <point x="0.56" y="0.44" />
+                            <point x="0.56" y="0.56" />
+                            <point x="0.44" y="0.56" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="red" pingpong="0" repeatcount="1" repeatto="0" sid="2166621936820442" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.52">
+                        <collision-poly>
+                            <point x="0.44" y="0.44" />
+                            <point x="0.56" y="0.44" />
+                            <point x="0.56" y="0.56" />
+                            <point x="0.44" y="0.56" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="reloading" pingpong="0" repeatcount="1" repeatto="0" sid="9077584003042152" speed="7">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.52">
+                        <collision-poly>
+                            <point x="0.44" y="0.44" />
+                            <point x="0.56" y="0.44" />
+                            <point x="0.56" y="0.56" />
+                            <point x="0.44" y="0.56" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.52">
+                        <collision-poly>
+                            <point x="0.44" y="0.44" />
+                            <point x="0.56" y="0.44" />
+                            <point x="0.56" y="0.56" />
+                            <point x="0.44" y="0.56" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.52">
+                        <collision-poly>
+                            <point x="0.44" y="0.44" />
+                            <point x="0.56" y="0.44" />
+                            <point x="0.56" y="0.56" />
+                            <point x="0.44" y="0.56" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="menuFundo" sid="7814307634517116">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="6835800649708711">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3985760825667461" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\menuFundo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="menuMonstro" sid="1187437240506091">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="8304213894522906">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6302549074678489" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\menuMonstro.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0.924479" />
+                            <point x="0.483163" y="0.919271" />
+                            <point x="0.29795" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="menuSiluetas" sid="9682844507471712">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="8726439171341765">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4518176055821009" speed="5">
+                    <frame duration="1" hotspotX="0.076555" hotspotY="0.574586" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\menuSiluetas.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="menuNomes" sid="2611451324309284">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3596490261807254" speed="5">
+                    <frame duration="1" hotspotX="-1.29185" hotspotY="7.48936" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\menuNomes.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="eng" pingpong="0" repeatcount="1" repeatto="0" sid="6951019073668721" speed="5">
+                    <frame duration="1" hotspotX="-1.14829" hotspotY="7.77778" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sim" sid="1162263524821441">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8343331011148862" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\sim.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="over" pingpong="0" repeatcount="1" repeatto="0" sid="3654913971491917" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="nao" sid="1649329898979212">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6536150922272905" speed="5">
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.506667" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\nao.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="over" pingpong="0" repeatcount="1" repeatto="0" sid="5262569838285544" speed="5">
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.506667" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="chrisLogo" sid="2232097471746859">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="69292929985323" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509259" original-source="G:\Google Drive\reborn\NovaLogo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="menuLuzolhodomonstro" sid="5369398733220251">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="4135870160551471">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9704640636117155" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0.492188" />
+                            <point x="1" y="0.492188" />
+                            <point x="1" y="0.507813" />
+                            <point x="0" y="0.507813" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Browser" sid="9840567243593899">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="pauseButton" sid="3056334653832143">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="isPaused" sid="2108928057417199" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1398682797193476" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.479167" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\gamePaused.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="menuVoltar" sid="4786014841870644">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5624283968105466" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\voltar.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="legenda" sid="7995608480332423">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="pularIntro" sid="4585518769195992">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="b_eng" sid="3580404940638445">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7330708101760659" speed="5">
+                    <frame duration="1" hotspotX="0.504" hotspotY="0.507042" original-source="G:\Google Drive\PROJETOS\Point Of Light\SPRITES\english.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="b_ptbr" sid="8335171925097864">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9198271057608088" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="G:\Google Drive\PROJETOS\Point Of Light\SPRITES\portugues.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GoogleAnalytics" sid="4230537133648457">
+            <plugin id="GoogleAnalytics_ST" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Loading.xml</layout>
+        <layout>Language.xml</layout>
+        <layout>Menu.xml</layout>
+        <layout>SelectPlayer.xml</layout>
+        <layout>Intro.xml</layout>
+        <layout>Gameplay.xml</layout>
+        <layout>GameOver.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Script Gameplay.xml</event-sheet>
+        <event-sheet>Script SelectPlayer.xml</event-sheet>
+        <event-sheet>Script Menu.xml</event-sheet>
+        <event-sheet>Script GameOver.xml</event-sheet>
+        <event-sheet>Script Loading.xml</event-sheet>
+        <event-sheet>Script Intro.xml</event-sheet>
+        <event-sheet>Event Language.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="2" />
+        <global-instance type="Keyboard" uid="16" />
+        <global-instance type="Audio" uid="22">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="54" />
+        <global-instance type="Touch" uid="70">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="30" />
+        <global-instance type="GoogleAnalytics" uid="60">
+            <properties>
+                <tracking-id>UA-78841852-1</tracking-id>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="selection.m4a" />
+        <file name="selection.ogg" />
+        <file name="Music1.ogg" />
+        <file name="desert eagle fire.m4a" />
+        <file name="desert eagle fire.ogg" />
+        <file name="Machine Gun fire.m4a" />
+        <file name="Machine Gun fire.ogg" />
+        <file name="hit1.m4a" />
+        <file name="hit1.ogg" />
+        <file name="hit2.m4a" />
+        <file name="hit2.ogg" />
+        <file name="hit3.m4a" />
+        <file name="hit3.ogg" />
+        <file name="hit4.m4a" />
+        <file name="hit4.ogg" />
+        <file name="hit5.m4a" />
+        <file name="hit5.ogg" />
+        <file name="hit6.m4a" />
+        <file name="hit6.ogg" />
+        <file name="hit7.m4a" />
+        <file name="hit7.ogg" />
+        <file name="hit8.m4a" />
+        <file name="hit8.ogg" />
+        <file name="hit10.m4a" />
+        <file name="hit10.ogg" />
+        <file name="hit11.m4a" />
+        <file name="hit11.ogg" />
+        <file name="hit12.m4a" />
+        <file name="hit12.ogg" />
+        <file name="hit13.m4a" />
+        <file name="hit13.ogg" />
+        <file name="hit14.m4a" />
+        <file name="hit14.ogg" />
+        <file name="hit9.m4a" />
+        <file name="hit9.ogg" />
+        <file name="DropItem.ogg" />
+        <file name="ItemGet.m4a" />
+        <file name="ItemGet.ogg" />
+        <file name="reload1.m4a" />
+        <file name="reload1.ogg" />
+        <file name="no_ammo.m4a" />
+        <file name="no_ammo.ogg" />
+        <file name="turret_fire.m4a" />
+        <file name="turret_fire.ogg" />
+        <file name="turret_start.m4a" />
+        <file name="turret_start.ogg" />
+        <file name="flame.m4a" />
+        <file name="flame.ogg" />
+        <file name="swooshy-trailer-punch.m4a" />
+        <file name="swooshy-trailer-punch.ogg" />
+        <file name="Ross Bugden - Haunted.m4a" />
+        <file name="Ross Bugden - Haunted.ogg" />
+        <file name="hitF1.m4a" />
+        <file name="hitF1.ogg" />
+        <file name="hitF2.m4a" />
+        <file name="hitF2.ogg" />
+        <file name="hitF3.m4a" />
+        <file name="hitF3.ogg" />
+        <file name="hitF4.m4a" />
+        <file name="hitF4.ogg" />
+        <file name="hitF5.m4a" />
+        <file name="hitF5.ogg" />
+        <file name="manDie1.m4a" />
+        <file name="manDie1.ogg" />
+        <file name="manDie2.m4a" />
+        <file name="manDie2.ogg" />
+        <file name="zombieDying.m4a" />
+        <file name="zombieDying.ogg" />
+        <file name="womanDying.m4a" />
+        <file name="womanDying.ogg" />
+        <file name="intro historia voz.m4a" />
+        <file name="intro historia voz.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="Alex Lisi - Horrorfinal.m4a" />
+        <file name="Alex Lisi - Horrorfinal.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

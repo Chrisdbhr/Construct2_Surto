@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Script Intro</name>
+    <events>
+        <event-group description="" sid="5080827968025466" title="Legendas">
+            <sub-events>
+                <event-block sid="5225228225620366">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="1614113884022015" type="System" />
+                        <condition id="-14" name="Compare variable" sid="4144795437021521" type="System">
+                            <param id="0" name="Variable">lang</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;eng&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7413950757758805" type="legenda">
+                            <param id="0" name="Text">&quot;O ministério da saude confirmou oficialmente hoje&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5480789059121718" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5332363234445098" type="legenda">
+                            <param id="0" name="Text">&quot;que existe uma ligação entre o zica vírus&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5609180516346484" type="System">
+                            <param id="0" name="Seconds">2.5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2697057027429408" type="legenda">
+                            <param id="0" name="Text">&quot;e o surto de microcefalia [...]&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1923019975745357" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4030748882819773" type="legenda">
+                            <param id="0" name="Text">&quot;3 vezes por semana milhares&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5218468895705892" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6943252934390543" type="legenda">
+                            <param id="0" name="Text">&quot;de mosquitos são soltos&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7114581728402844" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8819151141151626" type="legenda">
+                            <param id="0" name="Text">&quot;são machos do Aedes Aegypti genéticamente modificados [...]&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8981177709193564" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4077695280752479" type="legenda">
+                            <param id="0" name="Text">&quot;A vacina contra a dengue&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7243619519505663" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8376715940906739" type="legenda">
+                            <param id="0" name="Text">&quot;a substância aplicada é feita com o virus enfraquecido&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3462351194635671" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8226310919582472" type="legenda">
+                            <param id="0" name="Text">&quot;de modo que não causa doença&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8183176990573219" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6851329169467403" type="legenda">
+                            <param id="0" name="Text">&quot;o objetivo é prevenir 93%&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8347796921820694" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5583080542023616" type="legenda">
+                            <param id="0" name="Text">&quot;dos casos de dengue grave&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3487738773393872" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="867511828774342" type="legenda">
+                            <param id="0" name="Text">&quot;no total, um milhão e meio de pessoas foram infectadas.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4787336368933823" type="System">
+                            <param id="0" name="Seconds">3.5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6637013615955658" type="legenda">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8271686764682122" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="7911513264445815" type="System">
+                            <param id="0" name="Layout">Gameplay</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1660694965809604">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="2627578727096326" type="System" />
+                        <condition id="-14" name="Compare variable" sid="196859631989475" type="System">
+                            <param id="0" name="Variable">lang</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;eng&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="5601441936099833" type="pularIntro">
+                            <param id="0" name="Text">&quot;Press again to skip intro&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1048772138083773" type="legenda">
+                            <param id="0" name="Text">&quot;The Ministry of Health confirmed officially today&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4755193618444411" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7003285142206841" type="legenda">
+                            <param id="0" name="Text">&quot;there is a connection between Zika virus&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5560024962792" type="System">
+                            <param id="0" name="Seconds">2.5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8744547071007294" type="legenda">
+                            <param id="0" name="Text">&quot;and the outbreak of microcephaly [...]&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7774149596981187" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="56136350864406" type="legenda">
+                            <param id="0" name="Text">&quot;3 times a week thousands of mosquitoes are released&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3036574384609649" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5664635241513385" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6837559074113011" type="legenda">
+                            <param id="0" name="Text">&quot;these are male Aedes aegypti genetically modified. [...]&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7640881748585352" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1647775700236402" type="legenda">
+                            <param id="0" name="Text">&quot;The vaccine against dengue&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1609693409169377" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4708722831760985" type="legenda">
+                            <param id="0" name="Text">&quot;The applied substance is made with weakened virus&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="366234269591506" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7960211326435004" type="legenda">
+                            <param id="0" name="Text">&quot;so that does not cause disease&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1521501469679104" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4462476529949992" type="legenda">
+                            <param id="0" name="Text">&quot;The goal is to prevent 93% of severe dengue cases.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3607628314429744" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5790187523621843" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3470508126588509" type="legenda">
+                            <param id="0" name="Text">&quot;In total, a million and a half people were infected.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2971969414471265" type="System">
+                            <param id="0" name="Seconds">3.5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7610989781635442" type="legenda">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6559587942442413" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="8203211585377622" type="System">
+                            <param id="0" name="Layout">Gameplay</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="8558767508941163">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3355879287366699" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="1359559194901761" type="Audio">
+                    <param id="0" name="Audio file">intro historia voz</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;intro&quot;</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="2464419034849388" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="1219084759668413">
+            <conditions>
+                <condition id="1" name="On any click" sid="2109960685482847" type="Mouse" />
+                <condition id="1" name="On any key pressed" sid="757713748187466" type="Keyboard" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="7197112213392158" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7608516472470969">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="4485231475361722" type="pularIntro" />
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="905273174890829" type="Audio" />
+                        <action id="0" name="Play" sid="2835177093693522" type="Audio">
+                            <param id="0" name="Audio file">selection</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="9679693117440193" type="System">
+                            <param id="0" name="Layout">Gameplay</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8972960335288903">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Is visible" sid="458075867959251" type="pularIntro" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="7421923691772002" type="Audio">
+                            <param id="0" name="Audio file">selection</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3231278752871253" type="pularIntro">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

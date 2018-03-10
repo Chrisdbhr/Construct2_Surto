@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Script Menu</name>
+    <events>
+        <variable comment="br ou eng" constant="0" name="lang" sid="1790316571333941" static="0" type="text">br</variable>
+        <event-block sid="420888661749673">
+            <conditions>
+                <condition id="6" name="On update ready" sid="176808341137613" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="9" name="Reload" sid="5474514726901227" type="Browser" />
+            </actions>
+        </event-block>
+        <comment>definir para ingles algumas coisas</comment>
+        <event-block sid="8179794147053048">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7549066882540224" type="System" />
+                <condition id="-14" name="Compare variable" sid="1050925726938724" type="System">
+                    <param id="0" name="Variable">lang</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;eng&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="917383250963093" type="NovoJogo">
+                    <param id="0" name="Animation">&quot;eng&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="8814504205993525" type="menuNomes">
+                    <param id="0" name="Animation">&quot;eng&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1627799050824287">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2345272157325744" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="2752047778740959" type="Audio" />
+                <action id="-16" name="Wait" sid="3607785749909098" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="0" name="Play" sid="1306957441319249" type="Audio">
+                    <param id="0" name="Audio file">swooshy-trailer-punch</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action disabled="1" id="-4" name="Set position to another object" sid="8824701748811068" type="Cursor">
+                    <param id="0" name="Object">p_de</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action disabled="1" id="-10" name="Set value" sid="4073605024988627" type="Cursor">
+                    <param id="0" name="Instance variable">Cursor_Pos</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action disabled="1" id="4" name="Set animation" sid="9519943116720007" type="selectplayerBG">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="9454940668898783" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Play" sid="3314183691865824" type="Audio">
+                    <param id="0" name="Audio file">Ross Bugden - Haunted</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;Intro&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4457440235700096" type="SURTOlogo">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-34" name="Set layer background color" sid="2144262812742516" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Color">rgb(255, 255, 255)</param>
+                </action>
+                <action id="-18" name="Set layer opacity" sid="9659333088370587" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Opacity">100</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="2218227362467183" type="efeito">
+                    <param id="0" name="Object">SURTOlogo</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="4513118450953891" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="4210563636584146" type="NovoJogo" />
+                <action behavior="Pin" id="0" name="Pin to object" sid="8324274201206651" type="menuLuzolhodomonstro">
+                    <param id="0" name="Pin to">menuMonstro</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9458948687309549" type="NovoJogo">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5388146373688941" type="chrisLogo">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="10" name="Request fullscreen" sid="8340399061682702" type="Browser">
+                    <param id="0" name="Mode">3</param>
+                </action>
+                <action id="18" name="Lock orientation" sid="4618320028127871" type="Browser">
+                    <param id="0" name="Orientation">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>fade out na cena em branco</comment>
+        <event-block sid="2627242925006683">
+            <conditions>
+                <condition id="-17" name="Compare opacity" sid="367302608284913" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Opacity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Set layer opacity" sid="1061797725165475" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Opacity">LayerOpacity(3) - 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Reiniicar fade do novo jogo</comment>
+        <event-block sid="2533574965610643">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="828369065623539" type="NovoJogo" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="1395328370819836" type="NovoJogo" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="9704274196537166" title="Seleções">
+            <sub-events>
+                <event-block sid="462137223404426">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="7784722831664697" type="Mouse">
+                            <param id="0" name="Object">chrisLogo</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="80456905428485" type="chrisLogo" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="7605479378894884" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="406941084512498" type="chrisLogo">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="71467942227043">
+                            <conditions>
+                                <condition id="0" name="On click" sid="36398086986501" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="14" name="On tap" sid="3169291945990391" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="7843327111590879" type="Audio" />
+                                <action id="0" name="Play" sid="2545815705248844" type="Audio">
+                                    <param id="0" name="Audio file">selection</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Select&quot;</param>
+                                </action>
+                                <action id="7" name="Go to URL" sid="6622182856942819" type="Browser">
+                                    <param id="0" name="URL">&quot;http://www.chris7.tk&quot;</param>
+                                    <param id="1" name="Target">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="323784686867691">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4114495215674751" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="8634155913898118" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="7781489876001844" type="chrisLogo">
+                            <param id="0" name="Opacity">25</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="1242843068910975">
+                    <conditions>
+                        <condition id="1" name="On any click" sid="3088591278145224" type="Mouse" />
+                        <condition id="7" name="On any key released" sid="8171510126197538" type="Keyboard" />
+                        <condition id="14" name="On tap" sid="5904244776055921" type="Touch" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8560431796540569">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="8731824151742363" type="NovoJogo" />
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="9715057828388362" type="Mouse">
+                                    <param id="0" name="Object">chrisLogo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="6749283743227169" type="Audio">
+                                    <param id="0" name="Audio file">selection</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Select&quot;</param>
+                                </action>
+                                <action id="-34" name="Set layer background color" sid="9441877706219234" type="System">
+                                    <param id="0" name="Layer">3</param>
+                                    <param id="1" name="Color">rgb(255, 255, 255)</param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="3584318225613126" type="System">
+                                    <param id="0" name="Layer">3</param>
+                                    <param id="1" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="2703210860785934" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-34" name="Set layer background color" sid="9111907686647947" type="System">
+                                    <param id="0" name="Layer">3</param>
+                                    <param id="1" name="Color">rgb(0,0,0)</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="2192620471603165" type="System">
+                                    <param id="0" name="Layout">SelectPlayer</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="2143587188931542">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="929522971312369" type="System">
+                    <param id="0" name="Interval (seconds)">random(0.1,0.5)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="6911461050353921" type="efeito">
+                    <param id="0" name="Opacity">random(2,30)</param>
+                </action>
+                <action id="-3" name="Set position" sid="8801369122023985" type="efeito">
+                    <param id="0" name="X">SURTOlogo.X + random(-10,10)</param>
+                    <param id="1" name="Y">SURTOlogo.y + random(-10,10)</param>
+                </action>
+                <action id="-7" name="Set size" sid="4895777567215549" type="efeito">
+                    <param id="0" name="Width">SURTOlogo.Width + random(3,500)</param>
+                    <param id="1" name="Height">SURTOlogo.Height + random(-50,20)</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="9180949996796986" type="menuLuzolhodomonstro">
+                    <param id="0" name="Opacity">random(40,70)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>logo doido</comment>
+        <event-block sid="386838399311495">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="9172088233995571" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="6726109325682581" type="efeito">
+                    <param id="0" name="X">SURTOlogo.X + random(-5,5)</param>
+                    <param id="1" name="Y">SURTOlogo.y + random(-5,5)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7482139748799623">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="3240849634871904" type="CAMERA">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">SURTOlogo.X - 30</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="3469137637101097" type="CAMERA">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">SURTOlogo.X + 30</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="6499842584397702">
+            <conditions>
+                <condition id="-22" name="Else" sid="6247033097891744" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="1751920551213321" type="CAMERA">
+                    <param id="0" name="X">SURTOlogo.X + random(-5,5)</param>
+                    <param id="1" name="Y">SURTOlogo.y + random(-5,5)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="530706842189545">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="8850453302682706" type="CAMERA">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">SURTOlogo.Y - 30</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="240996710592152" type="CAMERA">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">SURTOlogo.Y + 30</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="6070457588786265">
+            <conditions>
+                <condition id="-22" name="Else" sid="303185060019713" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="9695419328817508" type="CAMERA">
+                    <param id="0" name="X">SURTOlogo.X + random(-5,5)</param>
+                    <param id="1" name="Y">SURTOlogo.y + random(-5,5)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

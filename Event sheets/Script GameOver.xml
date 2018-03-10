@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Script GameOver</name>
+    <events>
+        <event-block sid="7274338272882348">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4227558437841379" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="5337547613999191" type="Audio">
+                    <param id="0" name="Tag">&quot;music&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="7108630282348973" type="SHOWSCORE">
+                    <param id="0" name="Text">SCORE</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="530766780224976" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>debug</comment>
+        <event-block sid="5386111918489361">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="8981490260157712" type="System">
+                    <param id="0" name="Variable">Player_Selected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="3197441218712323" type="Audio" />
+                <action id="-2" name="Go to layout" sid="4040305350149129" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="6959709608394125" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1159308829532419">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="819798158247861" type="Mouse">
+                    <param id="0" name="Object">sim</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9652699322211886" type="sim">
+                    <param id="0" name="Animation">&quot;over&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9115113296745543">
+            <conditions>
+                <condition id="-22" name="Else" sid="7958255137164768" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6186248280685368" type="sim">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4252042322143384">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="2502555276073747" type="Mouse">
+                    <param id="0" name="Object">nao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="3166608302440547" type="nao">
+                    <param id="0" name="Animation">&quot;over&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3309721483319801">
+            <conditions>
+                <condition id="-22" name="Else" sid="4990651822179334" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7310471195567897" type="nao">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="3588789765455086">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="1318387182727812" type="Mouse">
+                    <param id="0" name="Object">sim</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="3217663347589223" type="Mouse">
+                    <param id="0" name="Object">nao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="7321449502281724" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2298289792378722">
+            <conditions>
+                <condition id="-22" name="Else" sid="8906206512649821" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="3250370818407473" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="4067455930125824">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4362151705970079" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">sim</param>
+                </condition>
+                <condition id="17" name="On tap object" sid="6007357328640208" type="Touch">
+                    <param id="0" name="Object">sim</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="374440592389893" type="Audio">
+                    <param id="0" name="Audio file">selection</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="6892623941972155" type="System">
+                    <param id="0" name="Variable">SCORE</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="4245880504759659" type="System">
+                    <param id="0" name="Variable">Game_Difficult</param>
+                    <param id="1" name="Value">15</param>
+                </action>
+                <action id="-9" name="Set value" sid="2800785431584348" type="System">
+                    <param id="0" name="Variable">Turret_active</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="7749925551101272" type="System">
+                    <param id="0" name="Layout">Gameplay</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="6262034347094955" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="2435909387866523" type="System" />
+            </actions>
+        </event-block>
+        <event-block any="1" sid="7761402372283751">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7726184097506372" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">nao</param>
+                </condition>
+                <condition id="17" name="On tap object" sid="646585375949853" type="Touch">
+                    <param id="0" name="Object">nao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="8483938738639375" type="Audio">
+                    <param id="0" name="Audio file">selection</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="2559155038222591" type="System" />
+                <action id="-2" name="Go to layout" sid="772264273985443" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="5476712995197683" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="8125877389602425" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

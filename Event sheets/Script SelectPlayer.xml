@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Script SelectPlayer</name>
+    <events>
+        <event-block sid="7300154980989937">
+            <conditions>
+                <condition id="6" name="On update ready" sid="4957302047706447" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="9" name="Reload" sid="3293186057106156" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="3875937180098453">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2027956417323649" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="3318202885902638" type="Cursor">
+                    <param id="0" name="Object">p_de</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="6723534312482164" type="Cursor">
+                    <param id="0" name="Instance variable">Cursor_Pos</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="8975838268089441" type="selectplayerBG">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-31" name="Set layout effect parameter" sid="5902774357445949" type="System">
+                    <param id="0" name="Effect">&quot;Grayscale&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="7547659353984851" type="System">
+                    <param id="0" name="Group name">&quot;cursor&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6641816983914395">
+            <conditions>
+                <condition id="-17" name="Compare opacity" sid="1037692987561103" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Opacity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Set layer opacity" sid="9553450888718422" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Opacity">LayerOpacity(3) - 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="1349612779081631" title="cursor">
+            <sub-events>
+                <event-block sid="7482384042050367">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="6130428825080752" type="Mouse">
+                            <param id="0" name="Object">p_de</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="1986075435672125" type="Cursor">
+                            <param id="0" name="Object">p_de</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5695745309128843" type="selectplayerBG">
+                            <param id="0" name="Animation">&quot;Magnum&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3638417856804431" type="Cursor">
+                            <param id="0" name="Instance variable">Cursor_Pos</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8960891826538135">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="5968863580802341" type="Mouse">
+                            <param id="0" name="Object">p_de</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="394372197774594">
+                            <conditions>
+                                <condition id="0" name="On click" sid="8049370437845959" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7372476322362094" type="System">
+                                    <param id="0" name="Variable">Player_Selected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6888534605105024">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="8214217420941612" type="Mouse">
+                            <param id="0" name="Object">p_f</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="7648083215139163" type="Cursor">
+                            <param id="0" name="Object">p_f</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5500436765499092" type="selectplayerBG">
+                            <param id="0" name="Animation">&quot;Flame&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5136270088023149" type="Cursor">
+                            <param id="0" name="Instance variable">Cursor_Pos</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="402625614470789">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="8713442032529394" type="Mouse">
+                            <param id="0" name="Object">p_f</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="4803654572088109">
+                            <conditions>
+                                <condition id="0" name="On click" sid="8163521318454765" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8746688342445587" type="System">
+                                    <param id="0" name="Variable">Player_Selected</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="8103417343760593">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="6748069901811183" type="Mouse">
+                            <param id="0" name="Object">p_m</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="7725909583328422" type="Cursor">
+                            <param id="0" name="Object">p_m</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6475405281888672" type="selectplayerBG">
+                            <param id="0" name="Animation">&quot;Rifle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3606960659219903" type="Cursor">
+                            <param id="0" name="Instance variable">Cursor_Pos</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="151195392475077">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="8650916305509426" type="Mouse">
+                            <param id="0" name="Object">p_m</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="8732983145786961">
+                            <conditions>
+                                <condition id="0" name="On click" sid="3491334077040338" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7888837233734863" type="System">
+                                    <param id="0" name="Variable">Player_Selected</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="512590090933383">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="3815334417732013" type="Mouse">
+                            <param id="0" name="Object">p_m</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="22452271058788" type="Mouse">
+                            <param id="0" name="Object">p_de</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="1647136784998475" type="Mouse">
+                            <param id="0" name="Object">p_f</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="60804484262788" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="290968904680538">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1448778715403921" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="8011298631040846" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7318102654365635">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="3360122442068158" type="Mouse">
+                            <param id="0" name="Object">menuVoltar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="9050088286645666" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="1149664181951478" type="menuVoltar">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="3288115828581944">
+                            <conditions>
+                                <condition id="0" name="On click" sid="8362019008247838" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="14" name="On tap" sid="7296065341902885" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="2374296480524718" type="Audio">
+                                    <param id="0" name="Audio file">selection</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Select&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="6954076341372706" type="System">
+                                    <param id="0" name="Layout">Menu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1341588851250255">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9959456312659853" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="2824158771942993" type="menuVoltar">
+                            <param id="0" name="Opacity">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>seelcionou player</comment>
+        <event-block sid="4851748169077351">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="2573395683262304" type="System">
+                    <param id="0" name="Variable">Player_Selected</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="2720685545052934" type="System" />
+            </conditions>
+            <actions>
+                <action id="-31" name="Set layout effect parameter" sid="6604146828813263" type="System">
+                    <param id="0" name="Effect">&quot;Grayscale&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">100</param>
+                </action>
+                <action id="-12" name="Set group active" sid="6622336676485674" type="System">
+                    <param id="0" name="Group name">&quot;cursor&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="238045744281801" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+                <action id="0" name="Play" sid="4999906848985086" type="Audio">
+                    <param id="0" name="Audio file">selection</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;Select&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="964259144834264" type="Audio">
+                    <param id="0" name="Audio file">swooshy-trailer-punch</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="6362526288264609" type="Audio">
+                    <param id="0" name="Tag">&quot;Intro&quot;</param>
+                </action>
+                <action id="-34" name="Set layer background color" sid="9152300312420834" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Color">rgb(255, 255, 255)</param>
+                </action>
+                <action id="-18" name="Set layer opacity" sid="1589559673576878" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Wait" sid="6996191892165448" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="7209498435035417" type="System">
+                    <param id="0" name="Object to create">FadeParaPreto</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="4424227844862845" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="1575171844010236" type="System">
+                    <param id="0" name="Layout">Intro</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>fade out na cena em branco</comment>
+        <event-block sid="4802348523921053">
+            <conditions>
+                <condition id="-17" name="Compare opacity" sid="7457235816495904" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Opacity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Set layer opacity" sid="9901315820223185" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Opacity">LayerOpacity(3) - 1.5</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
