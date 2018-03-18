@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>SURTO - CHRISdbhr game</name>
-    <description>Game based on Official Top Down Shooter game from Scirra, but with a lot of features.</description>
+    <name>SURTO</name>
+    <description></description>
     <version>1.08</version>
     <author>CHRISdbhr</author>
-    <author-email>chrisdbhr@gmail.com</author-email>
+    <author-email></author-email>
     <author-website>https://chrisdbhr.github.io</author-website>
     <app-id></app-id>
     <unique-id>29mmwl0uoj7bc</unique-id>
