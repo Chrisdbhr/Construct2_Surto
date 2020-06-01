@@ -110,8 +110,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1171</x>
-                        <y>475</y>
+                        <x>1044</x>
+                        <y>688</y>
                         <z>0</z>
                         <width>50</width>
                         <height>50</height>
@@ -132,8 +132,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>463</x>
-                        <y>1200</y>
+                        <x>584</x>
+                        <y>1123</y>
                         <z>0</z>
                         <width>50</width>
                         <height>50</height>
@@ -154,8 +154,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1099</x>
-                        <y>1136</y>
+                        <x>1177</x>
+                        <y>1205</y>
                         <z>0</z>
                         <width>50</width>
                         <height>50</height>
@@ -839,8 +839,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1100</x>
-                        <y>1136</y>
+                        <x>1178</x>
+                        <y>1205</y>
                         <z>0</z>
                         <width>109</width>
                         <height>33</height>
@@ -884,8 +884,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>461</x>
-                        <y>1201</y>
+                        <x>582</x>
+                        <y>1124</y>
                         <z>0</z>
                         <width>109</width>
                         <height>33</height>
@@ -936,13 +936,6 @@
                         </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
-                        <effect-instance type="AdjustHSL">
-                            <parameters>
-                                <hue>0.35</hue>
-                                <luminosity>1</luminosity>
-                                <saturation>1</saturation>
-                            </parameters>
-                        </effect-instance>
                         <effect-instance type="Brightness">
                             <parameters>
                                 <brightness>1</brightness>
@@ -1002,8 +995,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1173</x>
-                        <y>473</y>
+                        <x>1046</x>
+                        <y>686</y>
                         <z>0</z>
                         <width>109</width>
                         <height>33</height>
@@ -1078,18 +1071,30 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0.001</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Water">
                             <parameters>
                                 <angle>7</angle>
-                                <delta>20</delta>
+                                <delta>22</delta>
                                 <emboss>0.3</emboss>
-                                <frequency>2</frequency>
+                                <frequency>333</frequency>
                                 <intensity>1</intensity>
                                 <reflectivity>400</reflectivity>
-                                <speed>0.5</speed>
-                                <x-speed>0.2</x-speed>
-                                <y-speed>0.2</y-speed>
+                                <speed>1</speed>
+                                <x-speed>2</x-speed>
+                                <y-speed>2</y-speed>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -1115,18 +1120,30 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0.001</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Water">
                             <parameters>
                                 <angle>7</angle>
-                                <delta>20</delta>
+                                <delta>22</delta>
                                 <emboss>0.3</emboss>
-                                <frequency>2</frequency>
+                                <frequency>333</frequency>
                                 <intensity>1</intensity>
                                 <reflectivity>400</reflectivity>
-                                <speed>0.5</speed>
-                                <x-speed>0.2</x-speed>
-                                <y-speed>0.2</y-speed>
+                                <speed>1</speed>
+                                <x-speed>2</x-speed>
+                                <y-speed>2</y-speed>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -1152,18 +1169,30 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0.001</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Water">
                             <parameters>
                                 <angle>7</angle>
-                                <delta>20</delta>
+                                <delta>22</delta>
                                 <emboss>0.3</emboss>
-                                <frequency>2</frequency>
+                                <frequency>333</frequency>
                                 <intensity>1</intensity>
                                 <reflectivity>400</reflectivity>
-                                <speed>0.5</speed>
-                                <x-speed>0.2</x-speed>
-                                <y-speed>0.2</y-speed>
+                                <speed>1</speed>
+                                <x-speed>2</x-speed>
+                                <y-speed>2</y-speed>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -1189,18 +1218,30 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0.001</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Water">
                             <parameters>
                                 <angle>7</angle>
-                                <delta>20</delta>
+                                <delta>22</delta>
                                 <emboss>0.3</emboss>
-                                <frequency>2</frequency>
+                                <frequency>333</frequency>
                                 <intensity>1</intensity>
                                 <reflectivity>400</reflectivity>
-                                <speed>0.5</speed>
-                                <x-speed>0.2</x-speed>
-                                <y-speed>0.2</y-speed>
+                                <speed>1</speed>
+                                <x-speed>2</x-speed>
+                                <y-speed>2</y-speed>
                             </parameters>
                         </effect-instance>
                     </effect-instances>

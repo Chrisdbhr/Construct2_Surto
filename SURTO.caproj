@@ -2,13 +2,13 @@
 <c2project>
     <name>SURTO</name>
     <description></description>
-    <version>1.08</version>
+    <version>2</version>
     <author>CHRISdbhr</author>
     <author-email></author-email>
-    <author-website>https://chrisdbhr.github.io</author-website>
+    <author-website>chrisjogos.com</author-website>
     <app-id></app-id>
     <unique-id>29mmwl0uoj7bc</unique-id>
-    <saved-with-version>25500</saved-with-version>
+    <saved-with-version>27700</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -562,9 +562,6 @@
                 </behavior-type>
             </behaviors>
             <effects>
-                <effect-type name="AdjustHSL">
-                    <effect id="hsladjust" />
-                </effect-type>
                 <effect-type name="Brightness">
                     <effect id="brightness" />
                 </effect-type>
@@ -573,41 +570,47 @@
                 </effect-type>
             </effects>
             <animation-folder>
-                <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="8302002566447534" speed="7">
+                <animation framecount="1" loop="1" name="green" pingpong="1" repeatcount="1" repeatto="0" sid="8302002566447534" speed="7">
                     <frame duration="1" hotspotX="0.198459" hotspotY="0.454545" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\inimigo-andando1.png">
                         <collision-poly>
-                            <point x="0.845857" y="0.294671" />
-                            <point x="0.944123" y="0.473354" />
-                            <point x="0.460501" y="0.413793" />
-                            <point x="0.306359" y="0.768025" />
-                            <point x="0.0905588" y="0.783699" />
-                            <point x="0.0327553" y="0.373041" />
-                            <point x="0.138728" y="0.216301" />
-                            <point x="0.352601" y="0.166144" />
+                            <point x="0.855491" y="0.31348" />
+                            <point x="0.932562" y="0.476489" />
+                            <point x="0.427746" y="0.37931" />
+                            <point x="0.397881" y="0.615987" />
+                            <point x="0.213874" y="0.815047" />
+                            <point x="0.0770714" y="0.76489" />
+                            <point x="0.0385357" y="0.388715" />
+                            <point x="0.131021" y="0.22884" />
+                            <point x="0.362235" y="0.166144" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.198459" hotspotY="0.454545" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\inimigo-parado.png">
+                </animation>
+                <animation framecount="1" loop="0" name="blue" pingpong="0" repeatcount="1" repeatto="0" sid="516276290579745" speed="5">
+                    <frame duration="1" hotspotX="0.200385" hotspotY="0.435737" original-source="T:\ProjetosT\Construct2\Surto\SURTO---Construct-2-example-game\Animations\MONSTER\Default\blue.png">
                         <collision-poly>
-                            <point x="0.845857" y="0.294671" />
-                            <point x="0.944123" y="0.473354" />
-                            <point x="0.460501" y="0.413793" />
-                            <point x="0.306359" y="0.768025" />
-                            <point x="0.0905588" y="0.783699" />
-                            <point x="0.0327553" y="0.373041" />
-                            <point x="0.138728" y="0.216301" />
-                            <point x="0.352601" y="0.166144" />
+                            <point x="0.132948" y="0.216301" />
+                            <point x="0.356455" y="0.163009" />
+                            <point x="0.855491" y="0.310345" />
+                            <point x="0.938343" y="0.482759" />
+                            <point x="0.435453" y="0.394984" />
+                            <point x="0.394027" y="0.619122" />
+                            <point x="0.217727" y="0.805642" />
+                            <point x="0.0674374" y="0.730408" />
+                            <point x="0.0308285" y="0.37931" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.198459" hotspotY="0.454545" original-source="G:\Google Drive\PROJETOS\JAM eBolks EPIDEMIA\SPRITES\inimigo-andando2.png">
+                </animation>
+                <animation framecount="1" loop="0" name="red" pingpong="0" repeatcount="1" repeatto="0" sid="104960994071840" speed="5">
+                    <frame duration="1" hotspotX="0.500963" hotspotY="0.501567" original-source="T:\ProjetosT\Construct2\Surto\SURTO---Construct-2-example-game\Animations\MONSTER\Default\red.png">
                         <collision-poly>
+                            <point x="0.132948" y="0.216301" />
+                            <point x="0.377649" y="0.172414" />
                             <point x="0.845857" y="0.294671" />
-                            <point x="0.944123" y="0.473354" />
-                            <point x="0.460501" y="0.413793" />
-                            <point x="0.306359" y="0.768025" />
-                            <point x="0.0905588" y="0.783699" />
-                            <point x="0.0327553" y="0.373041" />
-                            <point x="0.138728" y="0.216301" />
-                            <point x="0.352601" y="0.166144" />
+                            <point x="0.944123" y="0.482759" />
+                            <point x="0.458574" y="0.373041" />
+                            <point x="0.229287" y="0.815047" />
+                            <point x="0.0751446" y="0.746082" />
+                            <point x="0.0366089" y="0.373041" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1208,6 +1211,11 @@
         </object-type>
         <object-type name="respawn_damage_area" sid="2135724319056884">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="584744237041461">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
             <effects>
                 <effect-type name="Water">
                     <effect id="water" />
@@ -1869,6 +1877,9 @@
         </object-type>
         <object-type name="GoogleAnalytics" sid="4230537133648457">
             <plugin id="GoogleAnalytics_ST" />
+        </object-type>
+        <object-type name="Text3" sid="154190777095868">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />

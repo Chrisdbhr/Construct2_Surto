@@ -59,97 +59,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>PAUSE SYSTEM</comment>
-                <event-block any="1" sid="3774459813007604">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="7667852078006166" type="Keyboard">
-                            <param id="0" name="Key">27</param>
-                        </condition>
-                        <condition id="0" name="On key pressed" sid="3656619552560546" type="Keyboard">
-                            <param id="0" name="Key">80</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="6433552842818769">
-                            <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7441859574028279" type="pauseButton">
-                                    <param id="0" name="Instance variable">isPaused</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="5312106922748003" type="pauseButton">
-                                    <param id="0" name="Instance variable">isPaused</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="6045196726941015" type="pauseButton">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="0" name="Play" sid="1270386491882879" type="Audio">
-                                    <param id="0" name="Audio file">selection</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-5</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                                <action id="3" name="Set volume" sid="5708104396386929" type="Audio">
-                                    <param id="0" name="Tag">&quot;music&quot;</param>
-                                    <param id="1" name="dB">-10</param>
-                                </action>
-                                <action id="-12" name="Set group active" sid="6956462322416066" type="System">
-                                    <param id="0" name="Group name">&quot;movimento&quot;</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action id="-31" name="Set layout effect parameter" sid="7911062312905526" type="System">
-                                    <param id="0" name="Effect">&quot;Grayscale&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">100</param>
-                                </action>
-                                <action id="-13" name="Set time scale" sid="2587930045172939" type="System">
-                                    <param id="0" name="Time scale">0</param>
-                                </action>
-                                <action id="0" name="Set cursor style" sid="700683745185354" type="Mouse">
-                                    <param id="0" name="Cursor style">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="11304884524711">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="7483128637263765" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set time scale" sid="1730086261178799" type="System">
-                                    <param id="0" name="Time scale">1</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="2672605936149654" type="pauseButton">
-                                    <param id="0" name="Instance variable">isPaused</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="5971705639408891" type="pauseButton">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-12" name="Set group active" sid="699284658428922" type="System">
-                                    <param id="0" name="Group name">&quot;movimento&quot;</param>
-                                    <param id="1" name="State">1</param>
-                                </action>
-                                <action id="0" name="Play" sid="7339825905264731" type="Audio">
-                                    <param id="0" name="Audio file">selection</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-5</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                                <action id="-31" name="Set layout effect parameter" sid="4996725497950168" type="System">
-                                    <param id="0" name="Effect">&quot;Grayscale&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
-                                <action id="3" name="Set volume" sid="453675118580648" type="Audio">
-                                    <param id="0" name="Tag">&quot;music&quot;</param>
-                                    <param id="1" name="dB">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="start some values " sid="5673280246946226" title="gameplay">
@@ -667,426 +576,6 @@
         </event-group>
         <event-group description="tudo relacionado a personagem, movimento, tiros, etc" sid="4667798278918721" title="Personagem">
             <sub-events>
-                <event-group description="Submetralhadora MADAFUCKING FODA que te ajuda quando você ganha 500 pontos" sid="7472589890095385" title="Turret/Minigun">
-                    <sub-events>
-                        <event-block sid="9342630727361765">
-                            <conditions>
-                                <condition behavior="Turret" id="1" name="On shoot" sid="8656114612709803" type="gun_turret1" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="6679097748965443" type="gun_turret1">
-                                    <param id="0" name="Object">Bullet_turret</param>
-                                    <param id="1" name="Layer">1</param>
-                                    <param id="2" name="Image point">1</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="6675085591316416" type="gun_turret1">
-                                    <param id="0" name="Object">GunFire2</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="Image point">1</param>
-                                </action>
-                                <action id="6" name="Stop" sid="4292443473239274" type="Audio">
-                                    <param id="0" name="Tag">&quot;minigunfire&quot;</param>
-                                </action>
-                                <action id="0" name="Play" sid="7421818498351474" type="Audio">
-                                    <param id="0" name="Audio file">turret_fire</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;minigunfire&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3751158797454376">
-                            <conditions>
-                                <condition behavior="Turret" id="1" name="On shoot" sid="8451247577322818" type="gun_turret2" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="6591278788535918" type="gun_turret2">
-                                    <param id="0" name="Object">Bullet_turret</param>
-                                    <param id="1" name="Layer">1</param>
-                                    <param id="2" name="Image point">1</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="7572992677550257" type="gun_turret2">
-                                    <param id="0" name="Object">GunFire2</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="Image point">1</param>
-                                </action>
-                                <action id="6" name="Stop" sid="514138255723988" type="Audio">
-                                    <param id="0" name="Tag">&quot;minigunfire&quot;</param>
-                                </action>
-                                <action id="0" name="Play" sid="5013301045884699" type="Audio">
-                                    <param id="0" name="Audio file">turret_fire</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;minigunfire&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3578213333492289">
-                            <conditions>
-                                <condition behavior="Turret" id="1" name="On shoot" sid="945134404234524" type="gun_turret3" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="1391489552660518" type="gun_turret3">
-                                    <param id="0" name="Object">Bullet_turret</param>
-                                    <param id="1" name="Layer">1</param>
-                                    <param id="2" name="Image point">1</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="6770537248232721" type="gun_turret3">
-                                    <param id="0" name="Object">GunFire2</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="Image point">1</param>
-                                </action>
-                                <action id="6" name="Stop" sid="2987138171682182" type="Audio">
-                                    <param id="0" name="Tag">&quot;minigunfire&quot;</param>
-                                </action>
-                                <action id="0" name="Play" sid="2695685102875189" type="Audio">
-                                    <param id="0" name="Audio file">turret_fire</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;minigunfire&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2452963839268698">
-                            <conditions>
-                                <condition behavior="Turret" id="1" name="On shoot" sid="8065979643517369" type="gun_turret4" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="8349510872577119" type="gun_turret4">
-                                    <param id="0" name="Object">Bullet_turret</param>
-                                    <param id="1" name="Layer">1</param>
-                                    <param id="2" name="Image point">1</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="8561843112212124" type="gun_turret4">
-                                    <param id="0" name="Object">GunFire2</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="Image point">1</param>
-                                </action>
-                                <action id="6" name="Stop" sid="1090464351557784" type="Audio">
-                                    <param id="0" name="Tag">&quot;minigunfire&quot;</param>
-                                </action>
-                                <action id="0" name="Play" sid="920210833509535" type="Audio">
-                                    <param id="0" name="Audio file">turret_fire</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;minigunfire&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9213258889666177">
-                            <conditions>
-                                <condition behavior="Turret" id="2" name="On target acquired" sid="2548932676881625" type="gun_turret1" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="6434179120686322" type="Audio">
-                                    <param id="0" name="Audio file">turret_start</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-7</param>
-                                    <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4268224746618183">
-                            <conditions>
-                                <condition behavior="Turret" id="2" name="On target acquired" sid="8430700273971951" type="gun_turret2" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="8429380180705611" type="Audio">
-                                    <param id="0" name="Audio file">turret_start</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-7</param>
-                                    <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6830390764483975">
-                            <conditions>
-                                <condition behavior="Turret" id="2" name="On target acquired" sid="1009600549142418" type="gun_turret3" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="7805320499099395" type="Audio">
-                                    <param id="0" name="Audio file">turret_start</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-7</param>
-                                    <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6509050836951915">
-                            <conditions>
-                                <condition behavior="Turret" id="2" name="On target acquired" sid="2898462786775859" type="gun_turret4" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="3312818184307159" type="Audio">
-                                    <param id="0" name="Audio file">turret_start</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-7</param>
-                                    <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4769836156402282">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="2668618955498882" type="gun_turret1">
-                                    <param id="0" name="Animation">&quot;gun_on&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-4" name="Set position to another object" sid="572437815257818" type="Minigun_light1">
-                                    <param id="0" name="Object">gun_turret1</param>
-                                    <param id="1" name="Image point (optional)">2</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="5692279885573281" type="Minigun_light1">
-                                    <param id="0" name="Angle">gun_turret1.Angle</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="7531599797435346">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="675146023842448" type="gun_turret2">
-                                    <param id="0" name="Animation">&quot;gun_on&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-4" name="Set position to another object" sid="9534458119618631" type="Minigun_light2">
-                                    <param id="0" name="Object">gun_turret2</param>
-                                    <param id="1" name="Image point (optional)">2</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="2351409003019384" type="Minigun_light2">
-                                    <param id="0" name="Angle">gun_turret2.Angle</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6398154364822195">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="47516856957833" type="gun_turret3">
-                                    <param id="0" name="Animation">&quot;gun_on&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-4" name="Set position to another object" sid="8707485799129909" type="Minigun_light3">
-                                    <param id="0" name="Object">gun_turret3</param>
-                                    <param id="1" name="Image point (optional)">2</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="6012633480984234" type="Minigun_light3">
-                                    <param id="0" name="Angle">gun_turret3.Angle</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2241037815173976">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="1838854295613114" type="gun_turret4">
-                                    <param id="0" name="Animation">&quot;gun_on&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-4" name="Set position to another object" sid="132062294175701" type="Minigun_light4">
-                                    <param id="0" name="Object">gun_turret4</param>
-                                    <param id="1" name="Image point (optional)">2</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="1335969203189348" type="Minigun_light4">
-                                    <param id="0" name="Angle">gun_turret4.Angle</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-group description="" sid="6524684093427769" title="turret 1">
-                            <sub-events>
-                                <event-block sid="1363428179472787">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="1969836316525773" type="System">
-                                            <param id="0" name="Variable">Turret_active</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                        <condition id="2" name="Is playing" sid="5426851958646712" type="gun_turret1">
-                                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Turret" id="5" name="Set enabled" sid="3690226198903058" type="gun_turret1">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="3971228461827912" type="gun_turret1">
-                                            <param id="0" name="Animation">&quot;gun_on&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="3865398868602559">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="6572981233182191" type="System">
-                                            <param id="0" name="Variable">SCORE</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">300</param>
-                                        </condition>
-                                        <condition id="2" name="Is playing" sid="1416191638117548" type="gun_turret1">
-                                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Play" sid="1378138042695944" type="Audio">
-                                            <param id="0" name="Audio file">turret_start</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">-5</param>
-                                            <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
-                                        </action>
-                                        <action id="-10" name="Add to" sid="3097237359141434" type="System">
-                                            <param id="0" name="Variable">Turret_active</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="8759433115219788" title="turret 2">
-                            <sub-events>
-                                <event-block sid="1363428179472787">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="1969836316525773" type="System">
-                                            <param id="0" name="Variable">Turret_active</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">2</param>
-                                        </condition>
-                                        <condition id="2" name="Is playing" sid="5426851958646712" type="gun_turret2">
-                                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Turret" id="5" name="Set enabled" sid="3690226198903058" type="gun_turret2">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="3971228461827912" type="gun_turret2">
-                                            <param id="0" name="Animation">&quot;gun_on&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="3865398868602559">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="6572981233182191" type="System">
-                                            <param id="0" name="Variable">SCORE</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">1000</param>
-                                        </condition>
-                                        <condition id="2" name="Is playing" sid="1416191638117548" type="gun_turret2">
-                                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Play" sid="4031394467952301" type="Audio">
-                                            <param id="0" name="Audio file">turret_start</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">-5</param>
-                                            <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
-                                        </action>
-                                        <action id="-10" name="Add to" sid="3097237359141434" type="System">
-                                            <param id="0" name="Variable">Turret_active</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="9196868609057061" title="turret 3">
-                            <sub-events>
-                                <event-block sid="1363428179472787">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="1969836316525773" type="System">
-                                            <param id="0" name="Variable">Turret_active</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">3</param>
-                                        </condition>
-                                        <condition id="2" name="Is playing" sid="5426851958646712" type="gun_turret3">
-                                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Turret" id="5" name="Set enabled" sid="3690226198903058" type="gun_turret3">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="3971228461827912" type="gun_turret3">
-                                            <param id="0" name="Animation">&quot;gun_on&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="3865398868602559">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="6572981233182191" type="System">
-                                            <param id="0" name="Variable">SCORE</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">2500</param>
-                                        </condition>
-                                        <condition id="2" name="Is playing" sid="4383043048842625" type="gun_turret3">
-                                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Play" sid="7334467813286991" type="Audio">
-                                            <param id="0" name="Audio file">turret_start</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">-5</param>
-                                            <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
-                                        </action>
-                                        <action id="-10" name="Add to" sid="3097237359141434" type="System">
-                                            <param id="0" name="Variable">Turret_active</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="7701708651741697" title="turret 4">
-                            <sub-events>
-                                <event-block sid="1363428179472787">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="1969836316525773" type="System">
-                                            <param id="0" name="Variable">Turret_active</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">4</param>
-                                        </condition>
-                                        <condition id="2" name="Is playing" sid="5426851958646712" type="gun_turret4">
-                                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Turret" id="5" name="Set enabled" sid="3690226198903058" type="gun_turret4">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="3971228461827912" type="gun_turret4">
-                                            <param id="0" name="Animation">&quot;gun_on&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="3865398868602559">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="6572981233182191" type="System">
-                                            <param id="0" name="Variable">SCORE</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">5000</param>
-                                        </condition>
-                                        <condition id="2" name="Is playing" sid="4383043048842625" type="gun_turret4">
-                                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Play" sid="4863301463660953" type="Audio">
-                                            <param id="0" name="Audio file">turret_start</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">-5</param>
-                                            <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
-                                        </action>
-                                        <action id="-10" name="Add to" sid="3097237359141434" type="System">
-                                            <param id="0" name="Variable">Turret_active</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                    </sub-events>
-                </event-group>
                 <event-group description="" sid="7604345107739547" title="tiro">
                     <sub-events>
                         <event-block sid="804214254979408">
@@ -1740,6 +1229,426 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="Submetralhadora MADAFUCKING FODA que te ajuda quando você ganha 500 pontos" sid="7472589890095385" title="Turret/Minigun">
+            <sub-events>
+                <event-block sid="9342630727361765">
+                    <conditions>
+                        <condition behavior="Turret" id="1" name="On shoot" sid="8656114612709803" type="gun_turret1" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="6679097748965443" type="gun_turret1">
+                            <param id="0" name="Object">Bullet_turret</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6675085591316416" type="gun_turret1">
+                            <param id="0" name="Object">GunFire2</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="4292443473239274" type="Audio">
+                            <param id="0" name="Tag">&quot;minigunfire&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="7421818498351474" type="Audio">
+                            <param id="0" name="Audio file">turret_fire</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;minigunfire&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3751158797454376">
+                    <conditions>
+                        <condition behavior="Turret" id="1" name="On shoot" sid="8451247577322818" type="gun_turret2" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="6591278788535918" type="gun_turret2">
+                            <param id="0" name="Object">Bullet_turret</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="7572992677550257" type="gun_turret2">
+                            <param id="0" name="Object">GunFire2</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="514138255723988" type="Audio">
+                            <param id="0" name="Tag">&quot;minigunfire&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="5013301045884699" type="Audio">
+                            <param id="0" name="Audio file">turret_fire</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;minigunfire&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3578213333492289">
+                    <conditions>
+                        <condition behavior="Turret" id="1" name="On shoot" sid="945134404234524" type="gun_turret3" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="1391489552660518" type="gun_turret3">
+                            <param id="0" name="Object">Bullet_turret</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6770537248232721" type="gun_turret3">
+                            <param id="0" name="Object">GunFire2</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="2987138171682182" type="Audio">
+                            <param id="0" name="Tag">&quot;minigunfire&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="2695685102875189" type="Audio">
+                            <param id="0" name="Audio file">turret_fire</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;minigunfire&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2452963839268698">
+                    <conditions>
+                        <condition behavior="Turret" id="1" name="On shoot" sid="8065979643517369" type="gun_turret4" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="8349510872577119" type="gun_turret4">
+                            <param id="0" name="Object">Bullet_turret</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="8561843112212124" type="gun_turret4">
+                            <param id="0" name="Object">GunFire2</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="1090464351557784" type="Audio">
+                            <param id="0" name="Tag">&quot;minigunfire&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="920210833509535" type="Audio">
+                            <param id="0" name="Audio file">turret_fire</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;minigunfire&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9213258889666177">
+                    <conditions>
+                        <condition behavior="Turret" id="2" name="On target acquired" sid="2548932676881625" type="gun_turret1" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="6434179120686322" type="Audio">
+                            <param id="0" name="Audio file">turret_start</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-7</param>
+                            <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4268224746618183">
+                    <conditions>
+                        <condition behavior="Turret" id="2" name="On target acquired" sid="8430700273971951" type="gun_turret2" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="8429380180705611" type="Audio">
+                            <param id="0" name="Audio file">turret_start</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-7</param>
+                            <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6830390764483975">
+                    <conditions>
+                        <condition behavior="Turret" id="2" name="On target acquired" sid="1009600549142418" type="gun_turret3" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="7805320499099395" type="Audio">
+                            <param id="0" name="Audio file">turret_start</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-7</param>
+                            <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6509050836951915">
+                    <conditions>
+                        <condition behavior="Turret" id="2" name="On target acquired" sid="2898462786775859" type="gun_turret4" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="3312818184307159" type="Audio">
+                            <param id="0" name="Audio file">turret_start</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-7</param>
+                            <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4769836156402282">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="2668618955498882" type="gun_turret1">
+                            <param id="0" name="Animation">&quot;gun_on&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="572437815257818" type="Minigun_light1">
+                            <param id="0" name="Object">gun_turret1</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="5692279885573281" type="Minigun_light1">
+                            <param id="0" name="Angle">gun_turret1.Angle</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7531599797435346">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="675146023842448" type="gun_turret2">
+                            <param id="0" name="Animation">&quot;gun_on&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="9534458119618631" type="Minigun_light2">
+                            <param id="0" name="Object">gun_turret2</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="2351409003019384" type="Minigun_light2">
+                            <param id="0" name="Angle">gun_turret2.Angle</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6398154364822195">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="47516856957833" type="gun_turret3">
+                            <param id="0" name="Animation">&quot;gun_on&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="8707485799129909" type="Minigun_light3">
+                            <param id="0" name="Object">gun_turret3</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="6012633480984234" type="Minigun_light3">
+                            <param id="0" name="Angle">gun_turret3.Angle</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2241037815173976">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="1838854295613114" type="gun_turret4">
+                            <param id="0" name="Animation">&quot;gun_on&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="132062294175701" type="Minigun_light4">
+                            <param id="0" name="Object">gun_turret4</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="1335969203189348" type="Minigun_light4">
+                            <param id="0" name="Angle">gun_turret4.Angle</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="6524684093427769" title="turret 1">
+                    <sub-events>
+                        <event-block sid="1363428179472787">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1969836316525773" type="System">
+                                    <param id="0" name="Variable">Turret_active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="5426851958646712" type="gun_turret1">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Turret" id="5" name="Set enabled" sid="3690226198903058" type="gun_turret1">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="3971228461827912" type="gun_turret1">
+                                    <param id="0" name="Animation">&quot;gun_on&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3865398868602559">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6572981233182191" type="System">
+                                    <param id="0" name="Variable">SCORE</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">300</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="1416191638117548" type="gun_turret1">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="1378138042695944" type="Audio">
+                                    <param id="0" name="Audio file">turret_start</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="3097237359141434" type="System">
+                                    <param id="0" name="Variable">Turret_active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="8759433115219788" title="turret 2">
+                    <sub-events>
+                        <event-block sid="1363428179472787">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1969836316525773" type="System">
+                                    <param id="0" name="Variable">Turret_active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="5426851958646712" type="gun_turret2">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Turret" id="5" name="Set enabled" sid="3690226198903058" type="gun_turret2">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="3971228461827912" type="gun_turret2">
+                                    <param id="0" name="Animation">&quot;gun_on&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3865398868602559">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6572981233182191" type="System">
+                                    <param id="0" name="Variable">SCORE</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1000</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="1416191638117548" type="gun_turret2">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="4031394467952301" type="Audio">
+                                    <param id="0" name="Audio file">turret_start</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="3097237359141434" type="System">
+                                    <param id="0" name="Variable">Turret_active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="9196868609057061" title="turret 3">
+                    <sub-events>
+                        <event-block sid="1363428179472787">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1969836316525773" type="System">
+                                    <param id="0" name="Variable">Turret_active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="5426851958646712" type="gun_turret3">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Turret" id="5" name="Set enabled" sid="3690226198903058" type="gun_turret3">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="3971228461827912" type="gun_turret3">
+                                    <param id="0" name="Animation">&quot;gun_on&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3865398868602559">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6572981233182191" type="System">
+                                    <param id="0" name="Variable">SCORE</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">2500</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="4383043048842625" type="gun_turret3">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="7334467813286991" type="Audio">
+                                    <param id="0" name="Audio file">turret_start</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="3097237359141434" type="System">
+                                    <param id="0" name="Variable">Turret_active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="7701708651741697" title="turret 4">
+                    <sub-events>
+                        <event-block sid="1363428179472787">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1969836316525773" type="System">
+                                    <param id="0" name="Variable">Turret_active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="5426851958646712" type="gun_turret4">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Turret" id="5" name="Set enabled" sid="3690226198903058" type="gun_turret4">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="3971228461827912" type="gun_turret4">
+                                    <param id="0" name="Animation">&quot;gun_on&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3865398868602559">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6572981233182191" type="System">
+                                    <param id="0" name="Variable">SCORE</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">5000</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="4383043048842625" type="gun_turret4">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="4863301463660953" type="Audio">
+                                    <param id="0" name="Audio file">turret_start</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;minigunstart&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="3097237359141434" type="System">
+                                    <param id="0" name="Variable">Turret_active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
         <event-group description="na versão 1.3 foi adicionada compatibilidade com celular" inactive="1" sid="4316808929076706" title="Compatibilidade com celular">
             <sub-events>
                 <event-block sid="9367301956314678">
@@ -1945,6 +1854,100 @@
         </event-group>
         <event-group description="a hud" sid="1644908917350659" title="HUD">
             <sub-events>
+                <event-group description="" sid="515179503795290" title="Pause">
+                    <sub-events>
+                        <event-block any="1" sid="3774459813007604">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="7667852078006166" type="Keyboard">
+                                    <param id="0" name="Key">27</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="3656619552560546" type="Keyboard">
+                                    <param id="0" name="Key">80</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6433552842818769">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7441859574028279" type="pauseButton">
+                                            <param id="0" name="Instance variable">isPaused</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="5312106922748003" type="pauseButton">
+                                            <param id="0" name="Instance variable">isPaused</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="6045196726941015" type="pauseButton">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="1270386491882879" type="Audio">
+                                            <param id="0" name="Audio file">selection</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="3" name="Set volume" sid="5708104396386929" type="Audio">
+                                            <param id="0" name="Tag">&quot;music&quot;</param>
+                                            <param id="1" name="dB">-10</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="6956462322416066" type="System">
+                                            <param id="0" name="Group name">&quot;movimento&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                        <action id="-31" name="Set layout effect parameter" sid="7911062312905526" type="System">
+                                            <param id="0" name="Effect">&quot;Grayscale&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">100</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="2587930045172939" type="System">
+                                            <param id="0" name="Time scale">0</param>
+                                        </action>
+                                        <action id="0" name="Set cursor style" sid="700683745185354" type="Mouse">
+                                            <param id="0" name="Cursor style">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="11304884524711">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7483128637263765" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set time scale" sid="1730086261178799" type="System">
+                                            <param id="0" name="Time scale">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="2672605936149654" type="pauseButton">
+                                            <param id="0" name="Instance variable">isPaused</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5971705639408891" type="pauseButton">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="699284658428922" type="System">
+                                            <param id="0" name="Group name">&quot;movimento&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="7339825905264731" type="Audio">
+                                            <param id="0" name="Audio file">selection</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-31" name="Set layout effect parameter" sid="4996725497950168" type="System">
+                                            <param id="0" name="Effect">&quot;Grayscale&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                        <action id="3" name="Set volume" sid="453675118580648" type="Audio">
+                                            <param id="0" name="Tag">&quot;music&quot;</param>
+                                            <param id="1" name="dB">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block sid="4275308469280697">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="657165665027973" type="PLAYER">
@@ -2324,6 +2327,22 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="6186987666558418">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3763129495552395" type="MONSTER">
+                            <param id="0" name="Instance variable">FireGlow</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="2055043659961631" type="MONSTER">
+                            <param id="0" name="Instance variable">FireGlow</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Monster Die</comment>
                 <event-block sid="1168764961659683">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="8190829225261414" type="MONSTER">
@@ -2339,14 +2358,15 @@
                         </action>
                         <action id="0" name="Spawn another object" sid="1664397967922736" type="MONSTER">
                             <param id="0" name="Object">Monster_Slain</param>
-                            <param id="1" name="Layer">1</param>
+                            <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action disabled="1" id="-25" name="Move to bottom" sid="779631104843498" type="MONSTER" />
                         <action id="-7" name="Set size" sid="9762164025522181" type="Monster_Slain">
                             <param id="0" name="Width">Monster.Width</param>
                             <param id="1" name="Height">Monster.Height</param>
                         </action>
-                        <action id="-25" name="Move to bottom" sid="4928175234224493" type="Monster_Slain" />
+                        <action disabled="1" id="-25" name="Move to bottom" sid="4928175234224493" type="Monster_Slain" />
                         <action id="-10" name="Set value" sid="919636809443088" type="MONSTER">
                             <param id="0" name="Instance variable">Item_a_dropar</param>
                             <param id="1" name="Value">random(1,30)</param>
@@ -2354,21 +2374,6 @@
                         <action id="-10" name="Set value" sid="8608487114113363" type="MONSTER">
                             <param id="0" name="Instance variable">Item_a_dropar</param>
                             <param id="1" name="Value">int(Self.Item_a_dropar)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6186987666558418">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3763129495552395" type="MONSTER">
-                            <param id="0" name="Instance variable">FireGlow</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="2055043659961631" type="MONSTER">
-                            <param id="0" name="Instance variable">FireGlow</param>
-                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2419,13 +2424,16 @@
                             <param id="0" name="Instance variable">Item_a_dropar</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="0" name="Play" sid="1462832359425394" type="Audio">
+                        <action id="-9" name="Destroy" sid="7476068801706004" type="MONSTER" />
+                        <action id="6" name="Stop" sid="268362984803127" type="Audio">
+                            <param id="0" name="Tag">&quot;zombieDie&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="199086062096616" type="Audio">
                             <param id="0" name="Audio file">zombieDying</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;zombieDie&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="7476068801706004" type="MONSTER" />
                     </actions>
                 </event-block>
                 <event-block sid="5680565722692541">
@@ -2456,13 +2464,16 @@
                             <param id="0" name="Instance variable">Item_a_dropar</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="0" name="Play" sid="7049640491469859" type="Audio">
+                        <action id="-9" name="Destroy" sid="4903694626578282" type="MONSTER" />
+                        <action id="6" name="Stop" sid="451093318752908" type="Audio">
+                            <param id="0" name="Tag">&quot;zombieDie&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="247254858677833" type="Audio">
                             <param id="0" name="Audio file">zombieDying</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;zombieDie&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="4903694626578282" type="MONSTER" />
                     </actions>
                 </event-block>
                 <event-block sid="2558166388590008">
@@ -2493,13 +2504,16 @@
                             <param id="0" name="Instance variable">Item_a_dropar</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="1233278618109731" type="MONSTER" />
+                        <action id="6" name="Stop" sid="525101865414199" type="Audio">
+                            <param id="0" name="Tag">&quot;zombieDie&quot;</param>
+                        </action>
                         <action id="0" name="Play" sid="4143074447011862" type="Audio">
                             <param id="0" name="Audio file">zombieDying</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;zombieDie&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="1233278618109731" type="MONSTER" />
                     </actions>
                 </event-block>
                 <event-block sid="5212760986733434">
@@ -2530,13 +2544,16 @@
                             <param id="0" name="Instance variable">Item_a_dropar</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="0" name="Play" sid="2707540189717885" type="Audio">
+                        <action id="-9" name="Destroy" sid="9331067696943869" type="MONSTER" />
+                        <action id="6" name="Stop" sid="908039834905495" type="Audio">
+                            <param id="0" name="Tag">&quot;zombieDie&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="782469182837140" type="Audio">
                             <param id="0" name="Audio file">zombieDying</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;zombieDie&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="9331067696943869" type="MONSTER" />
                     </actions>
                 </event-block>
                 <event-block sid="8673537724302126">
@@ -2567,13 +2584,16 @@
                             <param id="0" name="Instance variable">Item_a_dropar</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="0" name="Play" sid="4613074808565357" type="Audio">
+                        <action id="-9" name="Destroy" sid="9644717213786092" type="MONSTER" />
+                        <action id="6" name="Stop" sid="954819341715526" type="Audio">
+                            <param id="0" name="Tag">&quot;zombieDie&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="642899112755526" type="Audio">
                             <param id="0" name="Audio file">zombieDying</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;zombieDie&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="9644717213786092" type="MONSTER" />
                     </actions>
                 </event-block>
                 <comment>pegar itens</comment>
@@ -2971,7 +2991,7 @@
                         </action>
                         <action id="-12" name="Subtract from" sid="7391229068519254" type="PLAYER">
                             <param id="0" name="Instance variable">Vida</param>
-                            <param id="1" name="Value">4</param>
+                            <param id="1" name="Value">3</param>
                         </action>
                         <action id="-10" name="Set value" sid="6057375585249106" type="PLAYER">
                             <param id="0" name="Instance variable">Hit_sound</param>
@@ -3012,7 +3032,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="5405145094771407" type="Function">
                                     <param id="0" name="Name">&quot;create_monster&quot;</param>
-                                    <param id="1" name="Parameter {n}">30{###}1{###}20{###}150{###}35{###}0.17{###}60</param>
+                                    <param id="1" name="Parameter {n}">25{###}1{###}20{###}150{###}&quot;blue&quot;{###}0.17{###}60</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3026,7 +3046,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="4991267244226422" type="Function">
                                     <param id="0" name="Name">&quot;create_monster&quot;</param>
-                                    <param id="1" name="Parameter {n}">50{###}3{###}40{###}70{###}0{###}0.3{###}180</param>
+                                    <param id="1" name="Parameter {n}">50{###}3{###}40{###}70{###}&quot;green&quot;{###}0.3{###}180</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3040,7 +3060,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="1641599817212747" type="Function">
                                     <param id="0" name="Name">&quot;create_monster&quot;</param>
-                                    <param id="1" name="Parameter {n}">200{###}8{###}200{###}40{###}75{###}0.6{###}1000</param>
+                                    <param id="1" name="Parameter {n}">200{###}8{###}200{###}40{###}&quot;red&quot;{###}0.6{###}1000</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3158,11 +3178,6 @@
                                 <action behavior="Pathfinding" id="10" name="Set rotate speed" sid="2722541268223686" type="MONSTER">
                                     <param id="0" name="Rotate speed">Function.Param(3)</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="9821387153898316" type="MONSTER">
-                                    <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">Function.Param(4)</param>
-                                </action>
                                 <action id="9" name="Set scale" sid="3669418807129164" type="MONSTER">
                                     <param id="0" name="Scale">Function.Param(5)</param>
                                 </action>
@@ -3171,6 +3186,10 @@
                                 </action>
                                 <action id="6" name="Set speed" sid="6375021103456475" type="MONSTER">
                                     <param id="0" name="Speed">(function.Param(3)/7)</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="883225285792335" type="MONSTER">
+                                    <param id="0" name="Animation">Function.Param(4)</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
